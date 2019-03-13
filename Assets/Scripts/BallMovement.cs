@@ -32,6 +32,7 @@ public class BallMovement : MonoBehaviour
         {
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
         }
+        //Makes the ball add velocity upwards if it happens to only go on the x axis
         if(RB.velocity.y == 0)
         {
             RB.velocity += new Vector2(0.0f, RB.velocity.y + 0.2f);
@@ -69,8 +70,16 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.tag == "Goal")
         {
-            Debug.Log("Scored");
-            RestartBall();
+            if(collision.GetComponent<Goal>().GoalName == "Goal1")
+            {
+                Debug.Log("Player 2 Scored");
+                RestartBall();
+            }
+            if (collision.GetComponent<Goal>().GoalName == "Goal2")
+            {
+                Debug.Log("Player 1 Scored");
+                RestartBall();
+            }
         }
     }
     private void RestartBall()
