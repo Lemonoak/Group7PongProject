@@ -5,22 +5,37 @@ using UnityEngine;
 public class PickUpSpawner : MonoBehaviour
 {
     public GameObject refobject;
+    public GameObject cameraRef;
+    public float spawnInterwal;
+    public float startDelay;
+    float tempDelay;
+    float tempInterwal;
     public List<GameObject> allObjects;
     // Start is called before the first frame update
     void Start()
     {
-        SpawnPickUp();
+        tempDelay = Time.fixedTime;
+        tempInterwal = Time.fixedTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.fixedTime > startDelay + tempDelay 
+            && Time.fixedTime > spawnInterwal + tempInterwal)
+        {
+           // CleanList();
+            SpawnPickUp();
+            tempInterwal = Time.fixedTime;
+        }
     }
     void SpawnPickUp()
     {
-        //Instantiate(refobject, new Vector2(0,0), Quaternion.identity);
-        allObjects.Add(Instantiate(refobject, new Vector2(0, 0), Quaternion.identity));
+        allObjects.Add(Instantiate(refobject,
+            new Vector2(
+                Random.Range(-(cameraRef.transform.position.x), (cameraRef.transform.position.x)),
+                Random.Range(-(cameraRef.transform.position.x /2), (cameraRef.transform.position.x / 2))),
+                Quaternion.identity));
     }
     public void Reset()
     {
@@ -35,11 +50,14 @@ public class PickUpSpawner : MonoBehaviour
     }
     void CleanList()
     {
-        for( int i = allObjects.Count; i > -1; i--)
-        {
-            if (allObjects[i] == null)
+        if (allObjects.Count != 0)
+        {       
+            for( int i = allObjects.Count; i > -1; i--)
             {
-                allObjects.RemoveAt(i);
+                if (allObjects[i] == null)
+                {
+                    allObjects.RemoveAt(i);
+                }
             }
         }
     }

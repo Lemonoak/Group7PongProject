@@ -60,16 +60,22 @@ public class BallMovement : MonoBehaviour
     {
         if (collision.tag == "PickUp")
         {
-            Debug.Log("You tried to pick something up");
+            RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
         }
         else if (collision.tag == "Player")
         {
             Debug.Log("Entered Player");
-            RB.velocity += new Vector2(RB.velocity.x * HitPlayerSpeedUpValue, RB.velocity.y * HitPlayerSpeedUpValue);
+            //RB.velocity += new Vector2(RB.velocity.x * HitPlayerSpeedUpValue, RB.velocity.y * HitPlayerSpeedUpValue);
         }
         else if (collision.tag == "Goal")
         {
             Debug.Log("Scored");
+            RestartBall();
         }
+    }
+    private void RestartBall()
+    {
+        Instantiate(gameObject, new Vector2(0, 0), Quaternion.identity);
+        Destroy(gameObject);
     }
 }
