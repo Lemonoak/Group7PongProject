@@ -45,4 +45,23 @@ public class BallMovement : MonoBehaviour
             RB.AddForce(new Vector2(-StartSpeed, 0));
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PickUp")
+        {
+            Debug.Log("You tried to pick something up");
+        }
+        else if (collision.tag == "Player")
+        {
+            Debug.Log("Enterd Player");
+        }
+        else if (collision.tag == "Player")
+        {
+            Debug.Log("Scored");
+        }
+    }
 }

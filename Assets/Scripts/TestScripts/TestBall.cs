@@ -43,5 +43,14 @@ public class TestBall : MonoBehaviour
         {
             Debug.Log("You tried to pick something up");
         }
+        else if(collision.tag == "Player")
+        {
+            Debug.Log("Enterd Player");
+        }
+        else if (collision.tag == "Player")
+        {
+            Debug.Log("Scored");
+        }
+
     }
 }
