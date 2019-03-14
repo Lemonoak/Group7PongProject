@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac634a36f7aa22745a61236353eeae1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 9160729182158514494, guid: 152035231bd5f92468e19de549081952, type: 3}
   CurrentBallSpeed: 0
   SpeedUpValue: 0.001
   HitPlayerSpeedUpValue: 0.001
