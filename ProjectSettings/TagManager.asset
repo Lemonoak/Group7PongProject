@@ -8,6 +8,7 @@ TagManager:
   - PickUp
   - Goal
   - Wall
+  - AI
   layers:
   - Default
   - TransparentFX

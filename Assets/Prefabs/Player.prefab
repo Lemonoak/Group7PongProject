@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7745380947263837872}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Wall
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ Transform:
   m_GameObject: {fileID: 6542691234325441805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 4.875004, y: 1.1052595, z: 1}
+  m_LocalScale: {x: 1.3290675, y: 0.46993533, z: 0.32074}
   m_Children: []
   m_Father: {fileID: 1364407322290819306}
   m_RootOrder: 0

@@ -8,6 +8,8 @@ public class BallMovement : MonoBehaviour
 
     private Rigidbody2D RB;
     public GameObject spawner;
+    //for the AI to see the ball
+    public GameObject Ball;
 
     //The Speed that the ball current has, Used to calculate score
     public float CurrentBallSpeed = 0.0f;
@@ -22,6 +24,7 @@ public class BallMovement : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+        Ball = gameObject;
         //Randomzies direction to start and adds force on the ball
         RandomizeStartDirection();
     }
