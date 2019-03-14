@@ -71,15 +71,23 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.tag == "Goal")
         {
-            if(collision.GetComponent<Goal>().GoalName == "Goal1")
+            //ERROR HANDLING
+            if(collision.GetComponent<Goal>() != null)
             {
-                Debug.Log("Player 2 Scored");
-                RestartBall();
+                if(collision.GetComponent<Goal>().GoalName == "Goal1")
+                {
+                    Debug.Log("Player 2 Scored");
+                    RestartBall();
+                }
+                else if (collision.GetComponent<Goal>().GoalName == "Goal2")
+                {
+                    Debug.Log("Player 1 Scored");
+                    RestartBall();
+                }
             }
-            if (collision.GetComponent<Goal>().GoalName == "Goal2")
+            else
             {
-                Debug.Log("Player 1 Scored");
-                RestartBall();
+                Debug.Log("Goal is missing goal component or has the wrong GoalName");
             }
         }
     }
