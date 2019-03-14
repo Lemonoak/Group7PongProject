@@ -20,7 +20,7 @@ public class Player_Movement : MonoBehaviour
         this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10f * Input.GetAxis(movementkey));
         if (Input.GetAxis(movementkey) != 0)
         {
-            Debug.Log(movementkey);
+            //Debug.Log(movementkey);
         }
         
 
