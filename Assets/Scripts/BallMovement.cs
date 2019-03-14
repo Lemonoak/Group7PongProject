@@ -7,6 +7,7 @@ public class BallMovement : MonoBehaviour
 {
 
     private Rigidbody2D RB;
+    public GameObject spawner;
 
     //The Speed that the ball current has, Used to calculate score
     public float CurrentBallSpeed = 0.0f;
@@ -46,14 +47,14 @@ public class BallMovement : MonoBehaviour
     void RandomizeStartDirection()
     {
         int StartValue = Random.Range(0, 2);
-
-        if(StartValue == 0)
+       
+        if(transform.position.x > 0)
         {
             RB.AddForce(new Vector2(StartSpeed, StartSpeed / 2));
         }
-        else if (StartValue == 1)
+        else
         {
-            RB.AddForce(new Vector2(-StartSpeed, StartSpeed / 2));
+            RB.AddForce(new Vector2(-StartSpeed, -StartSpeed / 2));
         }
     }
 
@@ -84,7 +85,6 @@ public class BallMovement : MonoBehaviour
     }
     private void RestartBall()
     {
-        Instantiate(gameObject, new Vector2(0, 0), Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(gameObject); 
     }
 }
