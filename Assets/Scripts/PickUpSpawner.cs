@@ -10,6 +10,8 @@ public class PickUpSpawner : MonoBehaviour
     public float startDelay;
     float tempDelay;
     float tempInterwal;
+    public List<OnBoardPickUp> leftPickups;
+    public List<OnBoardPickUp> rightPickups;
     public List<GameObject> allObjects;
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,8 @@ public class PickUpSpawner : MonoBehaviour
         if (Time.fixedTime > startDelay + tempDelay 
             && Time.fixedTime > spawnInterwal + tempInterwal)
         {
-           // CleanList();
-            SpawnPickUp();
+            // CleanList();
+            TurnOnPickup();
             tempInterwal = Time.fixedTime;
         }
     }
@@ -60,5 +62,17 @@ public class PickUpSpawner : MonoBehaviour
                 }
             }
         }
+    }
+    void TurnOnPickup()
+    {
+        if (Random.value > 0.5f)
+        {
+            leftPickups[Random.Range(0, 3)].TurnOn();
+        }
+        else
+        {
+            rightPickups[Random.Range(0, 3)].TurnOn();
+        }
+
     }
 }

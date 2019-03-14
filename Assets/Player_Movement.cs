@@ -18,6 +18,12 @@ public class Player_Movement : MonoBehaviour
     {
 
         this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10f * Input.GetAxis(movementkey));
+        if (Input.GetAxis(movementkey) != 0)
+        {
+            Debug.Log(movementkey);
+        }
+        
+
         /*var dave = this.transform.position;
 
         dave.x = Mathf.Clamp(dave.x, -10f, 10f);
@@ -65,8 +71,8 @@ public class Player_Movement : MonoBehaviour
 
                 }
                 else this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -0f);
-                */ 
- 
+                */
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
