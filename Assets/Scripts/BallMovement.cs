@@ -55,18 +55,18 @@ public class BallMovement : MonoBehaviour
         if (CurrentX < 0 && CurrentY < 0)
         {
             CurrentBallSpeed = Mathf.Abs(CurrentY) + Mathf.Abs(CurrentX);
-            //Debug.Log("  Ball Speed  X , Y = " + Mathf.Round(CurrentBallSpeed));
-            //Debug.Log("  Y   " + CurrentY);
-            //Debug.Log("  X   " + CurrentX);
+            Debug.Log("  Ball Speed  X , Y = " + Mathf.Round(CurrentBallSpeed));
+            Debug.Log("  Y   " + CurrentY);
+            Debug.Log("  X   " + CurrentX);
         }
 
         else if (CurrentX < 0)
         {
 
             CurrentBallSpeed = Mathf.Abs(CurrentX) + CurrentY;
-            //Debug.Log("  Ball Speed   X = " + Mathf.Round(CurrentBallSpeed));
-            //Debug.Log("  X   " + CurrentX);
-            //Debug.Log("  Y   " + CurrentY);
+            Debug.Log("  Ball Speed   X = " + Mathf.Round(CurrentBallSpeed));
+            Debug.Log("  X   " + CurrentX);
+            Debug.Log("  Y   " + CurrentY);
 
 
 
@@ -76,9 +76,9 @@ public class BallMovement : MonoBehaviour
         {
 
             CurrentBallSpeed = Mathf.Abs(CurrentY) + CurrentX;
-            //Debug.Log("  Ball Speed  Y = " + Mathf.Round(CurrentBallSpeed));
-            //Debug.Log("  Y   " + CurrentY);
-            //Debug.Log("  X   " + CurrentX);
+            Debug.Log("  Ball Speed  Y = " + Mathf.Round(CurrentBallSpeed));
+            Debug.Log("  Y   " + CurrentY);
+            Debug.Log("  X   " + CurrentX);
         }
 
 
@@ -120,12 +120,12 @@ public class BallMovement : MonoBehaviour
             {
                 if (collision.GetComponent<Goal>().GoalName == "Goal1")
                 {
-                    Debug.Log("Player 2 Scored");
+                    Debug.Log("Player 2 Scored---------------------------------------------------------------------" + CurrentBallSpeed);
                     RestartBall();
                 }
                 else if (collision.GetComponent<Goal>().GoalName == "Goal2")
                 {
-                    Debug.Log("Player 1 Scored");
+                    Debug.Log("Player 1 Scored----------------------------------------------------------------------" + CurrentBallSpeed);
                     RestartBall();
                 }
             }
