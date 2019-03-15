@@ -17,8 +17,7 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
 
-        //this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10f * Input.GetAxis(movementkey));
-        GetComponent<Transform>().Translate(new Vector2(-Input.GetAxis(movementkey) * speed * Time.deltaTime, 0f));
+        this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10f * Input.GetAxis(movementkey));
         if (Input.GetAxis(movementkey) != 0)
         {
             //Debug.Log(movementkey);

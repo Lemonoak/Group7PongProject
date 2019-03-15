@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!58 &1682644557568951632
 CircleCollider2D:
@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 9160729182158514494, guid: 152035231bd5f92468e19de549081952, type: 3}
-  Ball: {fileID: 0}
   CurrentBallSpeed: 0
   SpeedUpValue: 0.001
   HitPlayerSpeedUpValue: 0.001
