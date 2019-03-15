@@ -120,12 +120,12 @@ public class BallMovement : MonoBehaviour
             {
                 if (collision.GetComponent<Goal>().GoalName == "Goal1")
                 {
-                    Debug.Log("Player 2 Scored");
+                    Debug.Log("Player 2 Scored ------------------  " + CurrentBallSpeed);
                     RestartBall();
                 }
                 else if (collision.GetComponent<Goal>().GoalName == "Goal2")
                 {
-                    Debug.Log("Player 1 Scored");
+                    Debug.Log("Player 1 Scored ------------------   " + CurrentBallSpeed);
                     RestartBall();
                 }
             }
