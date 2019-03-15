@@ -37,7 +37,7 @@ public class BallMovement : MonoBehaviour
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
         }
         //Makes the ball add velocity upwards if it happens to only go on the x axis
-        if(RB.velocity.y == 0)
+        if (RB.velocity.y == 0.0f)
         {
             RB.velocity += new Vector2(0.0f, RB.velocity.y + 0.2f);
         }
