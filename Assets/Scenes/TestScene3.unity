@@ -326,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 1364407322290819306, guid: acd3c9ea2408aef42b9647dadd1096ea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.096
+      value: -14.7
       objectReference: {fileID: 0}
     - target: {fileID: 1364407322290819306, guid: acd3c9ea2408aef42b9647dadd1096ea,
         type: 3}
@@ -412,6 +412,21 @@ PrefabInstance:
         type: 3}
       propertyPath: movementkey
       value: Push1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd3c9ea2408aef42b9647dadd1096ea, type: 3}
@@ -1806,11 +1821,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.53, y: 0.5}
+    oldSize: {x: 2.34, y: 1.67}
     newSize: {x: 1.53, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1856,7 +1871,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: d90e725bcbe68d540aef0125e178ce94, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fbc068b720db8d41a94b20822bdaf21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1875,7 +1890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666299190}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710635, w: 0.7071073}
-  m_LocalPosition: {x: 15.096, y: 0.133, z: 0}
+  m_LocalPosition: {x: 14.697, y: 0.106, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2213,6 +2228,16 @@ PrefabInstance:
       propertyPath: rightPickups.Array.data[0]
       value: 
       objectReference: {fileID: 1643588609}
+    - target: {fileID: 8905007663292290819, guid: 9f627c92b2b7d5d49aa9e83d670c9482,
+        type: 3}
+      propertyPath: startDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905007663292290819, guid: 9f627c92b2b7d5d49aa9e83d670c9482,
+        type: 3}
+      propertyPath: spawnInterwal
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f627c92b2b7d5d49aa9e83d670c9482, type: 3}
 --- !u!1001 &1900734947
