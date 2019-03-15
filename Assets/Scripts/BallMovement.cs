@@ -21,6 +21,9 @@ public class BallMovement : MonoBehaviour
     //the speed the balls starts with on the X axis, the Y is also this value but divided by 2
     public float StartSpeed = 1.0f;
 
+    float CurrentX = 0.0f;
+    float CurrentY = 0.0f;
+
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -32,26 +35,64 @@ public class BallMovement : MonoBehaviour
     void Update()
     {
         //Limits the speed to velocty 45 so that collisions dont break (NEEDS MORE TESTING)
-        if(RB.velocity.x < 45 || RB.velocity.y < 45 || RB.velocity.x > -45 || RB.velocity.y > -45)
+        if (RB.velocity.x < 45 || RB.velocity.y < 45 || RB.velocity.x > -45 || RB.velocity.y > -45)
         {
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
         }
         //Makes the ball add velocity upwards if it happens to only go on the x axis
-        if(RB.velocity.y == 0)
+        if (RB.velocity.y == 0)
         {
             RB.velocity += new Vector2(0.0f, RB.velocity.y + 0.2f);
         }
 
+        CurrentX = Mathf.Round(RB.velocity.x);
+        CurrentY = Mathf.Round(RB.velocity.y);
+
+
         //Sets a float to make score depend on velocity
-        CurrentBallSpeed = RB.velocity.x + RB.velocity.y;
+        //CurrentBallSpeed = CurrentX + CurrentY;
+
+        if (CurrentX < 0 && CurrentY < 0)
+        {
+            CurrentBallSpeed = Mathf.Abs(CurrentY) + Mathf.Abs(CurrentX);
+            Debug.Log("  Ball Speed  X , Y = " + Mathf.Round(CurrentBallSpeed));
+            Debug.Log("  Y   " + CurrentY);
+            Debug.Log("  X   " + CurrentX);
+        }
+
+        else if (CurrentX < 0)
+        {
+
+            CurrentBallSpeed = Mathf.Abs(CurrentX) + CurrentY;
+            Debug.Log("  Ball Speed   X = " + Mathf.Round(CurrentBallSpeed));
+            Debug.Log("  X   " + CurrentX);
+            Debug.Log("  Y   " + CurrentY);
+
+
+
+        }
+
+        else if (CurrentY < 0)
+        {
+
+            CurrentBallSpeed = Mathf.Abs(CurrentY) + CurrentX;
+            Debug.Log("  Ball Speed  Y = " + Mathf.Round(CurrentBallSpeed));
+            Debug.Log("  Y   " + CurrentY);
+            Debug.Log("  X   " + CurrentX);
+        }
+
+
+
+
+
     }
 
     //Sets the start direction and adds force to the ball in that direction
     void RandomizeStartDirection()
     {
         int StartValue = Random.Range(0, 2);
-       
-        if(transform.position.x > 0)
+
+        if (transform.position.x > 0)
         {
             RB.AddForce(new Vector2(StartSpeed, StartSpeed / 2));
         }
@@ -75,16 +116,16 @@ public class BallMovement : MonoBehaviour
         else if (collision.tag == "Goal")
         {
             //ERROR HANDLING
-            if(collision.GetComponent<Goal>() != null)
+            if (collision.GetComponent<Goal>() != null)
             {
-                if(collision.GetComponent<Goal>().GoalName == "Goal1")
+                if (collision.GetComponent<Goal>().GoalName == "Goal1")
                 {
-                    Debug.Log("Player 2 Scored");
+                    Debug.Log("Player 2 Scored---------------------------------------------------------------------" + CurrentBallSpeed);
                     RestartBall();
                 }
                 else if (collision.GetComponent<Goal>().GoalName == "Goal2")
                 {
-                    Debug.Log("Player 1 Scored");
+                    Debug.Log("Player 1 Scored----------------------------------------------------------------------" + CurrentBallSpeed);
                     RestartBall();
                 }
             }
@@ -96,6 +137,6 @@ public class BallMovement : MonoBehaviour
     }
     private void RestartBall()
     {
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 }
