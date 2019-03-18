@@ -16,12 +16,13 @@ public class BallSpawner : MonoBehaviour
         SpawnBall();
         AIReference = GameObject.FindGameObjectsWithTag("AI");
         //ERROR HANDLING
-        if(AIReference[0])
+        if (AIReference.Length == 1)
         {
             AIReference[0].GetComponent<AI>().GetBall();
         }
-        if (AIReference[1])
+        if (AIReference.Length > 1)
         {
+            AIReference[0].GetComponent<AI>().GetBall();
             AIReference[1].GetComponent<AI>().GetBall();
         }
     }
@@ -33,12 +34,13 @@ public class BallSpawner : MonoBehaviour
         {
             SpawnBall();
             //ERROR HANDLING
-            if (AIReference[0])
+            if (AIReference.Length == 1)
             {
                 AIReference[0].GetComponent<AI>().GetBall();
             }
-            if (AIReference[1])
+            if (AIReference.Length > 1)
             {
+                AIReference[0].GetComponent<AI>().GetBall();
                 AIReference[1].GetComponent<AI>().GetBall();
             }
         }
