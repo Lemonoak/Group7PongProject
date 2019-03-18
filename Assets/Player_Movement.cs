@@ -22,7 +22,6 @@ public class Player_Movement : MonoBehaviour
         {
             //Debug.Log(movementkey);
         }
-        
 
         /*var dave = this.transform.position;
 
