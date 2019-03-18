@@ -18,36 +18,17 @@ public class AI : MonoBehaviour
     void HandleMovement()
     {
         //Checks if there is a ball and then if the balls position is on the ai's screen
-        if(transform.position.x > 0)
+        if(Ball && Ball.transform.position.x > 0)
         {
-            if(Ball && Ball.transform.position.x > 0)
+            //Moves the ai upwards
+            if(Ball.transform.position.y > gameObject.transform.position.y)
             {
-                //Moves the ai upwards
-                if(Ball.transform.position.y > gameObject.transform.position.y)
-                {
-                    transform.Translate(new Vector3(Time.deltaTime * AISpeed, 0.0f, 0.0f));
-                }
-                //Moves the ai downwards
-                else if (Ball.transform.position.y < gameObject.transform.position.y)
-                {
-                    transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
-                }
+                transform.Translate(new Vector3(Time.deltaTime * AISpeed, 0.0f, 0.0f));
             }
-        }
-        else if (transform.position.x < 0)
-        {
-            if (Ball && Ball.transform.position.x < 0)
+            //Moves the ai downwards
+            else if (Ball.transform.position.y < gameObject.transform.position.y)
             {
-                //Moves the ai upwards
-                if (Ball.transform.position.y > gameObject.transform.position.y)
-                {
-                    transform.Translate(new Vector3(Time.deltaTime * AISpeed, 0.0f, 0.0f));
-                }
-                //Moves the ai downwards
-                else if (Ball.transform.position.y < gameObject.transform.position.y)
-                {
-                    transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
-                }
+                transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
             }
         }
     }
