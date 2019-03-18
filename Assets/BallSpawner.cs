@@ -8,17 +8,21 @@ public class BallSpawner : MonoBehaviour
     public GameObject ballSpawnPoint2;
     public GameObject spawnrefObject;
     GameObject spawnedObject;
-    public GameObject AIReference;
+    public GameObject[] AIReference;
 
     // Start is called before the first frame update
     void Start()
     {
         SpawnBall();
-        AIReference = GameObject.FindGameObjectWithTag("AI");
+        AIReference = GameObject.FindGameObjectsWithTag("AI");
         //ERROR HANDLING
-        if(AIReference)
+        if(AIReference[0])
         {
-            AIReference.GetComponent<AI>().GetBall();
+            AIReference[0].GetComponent<AI>().GetBall();
+        }
+        if (AIReference[1])
+        {
+            AIReference[1].GetComponent<AI>().GetBall();
         }
     }
 
@@ -29,9 +33,13 @@ public class BallSpawner : MonoBehaviour
         {
             SpawnBall();
             //ERROR HANDLING
-            if(AIReference)
+            if (AIReference[0])
             {
-                AIReference.GetComponent<AI>().GetBall();
+                AIReference[0].GetComponent<AI>().GetBall();
+            }
+            if (AIReference[1])
+            {
+                AIReference[1].GetComponent<AI>().GetBall();
             }
         }
     }

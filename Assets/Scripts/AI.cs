@@ -17,18 +17,40 @@ public class AI : MonoBehaviour
 
     void HandleMovement()
     {
-        //Checks if there is a ball and then if the balls position is on the ai's screen
-        if(Ball && Ball.transform.position.x > 0)
+        //For the ai on the right monitor
+        if(transform.position.x > 0)
         {
-            //Moves the ai upwards
-            if(Ball.transform.position.y > gameObject.transform.position.y)
+            //Checks if there is a ball and then if the balls position is on the ai's screen
+            if(Ball && Ball.transform.position.x > 0)
             {
-                transform.Translate(new Vector3(Time.deltaTime * AISpeed, 0.0f, 0.0f));
+                //Moves the ai upwards
+                if(Ball.transform.position.y > gameObject.transform.position.y)
+                {
+                    transform.Translate(new Vector3(Time.deltaTime * AISpeed, 0.0f, 0.0f));
+                }
+                //Moves the ai downwards
+                else if (Ball.transform.position.y < gameObject.transform.position.y)
+                {
+                    transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
+                }
             }
-            //Moves the ai downwards
-            else if (Ball.transform.position.y < gameObject.transform.position.y)
+        }
+        //For the ai on the left monitor
+        else if(transform.position.x < 0)
+        {
+            //Checks if there is a ball and then if the balls position is on the ai's screen
+            if (Ball && Ball.transform.position.x < 0)
             {
-                transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
+                //Moves the ai upwards
+                if (Ball.transform.position.y < gameObject.transform.position.y)
+                {
+                    transform.Translate(new Vector3(Time.deltaTime * AISpeed, 0.0f, 0.0f));
+                }
+                //Moves the ai downwards
+                else if (Ball.transform.position.y > gameObject.transform.position.y)
+                {
+                    transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
+                }
             }
         }
     }
@@ -36,10 +58,14 @@ public class AI : MonoBehaviour
     //Spawns the player if it presses a movementkey
     void SpawnPlayer()
     {
-        if (Input.GetButtonDown("Movement2"))
+        //ERROR HANDLING AND MENU
+        if(Player)
         {
-            Instantiate(Player, transform.position, Quaternion.Euler(0.0f, 0.0f, 90.0f));
-            Destroy(gameObject);
+            if (Input.GetButtonDown("Movement2"))
+            {
+                Instantiate(Player, transform.position, Quaternion.Euler(0.0f, 0.0f, 90.0f));
+                Destroy(gameObject);
+            }
         }
     }
 
