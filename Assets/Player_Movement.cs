@@ -56,22 +56,22 @@ public class Player_Movement : MonoBehaviour
                 {
                     this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 }
-  
-                if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 10f)
-                {
-                    this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, speed);
+  */
+        if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 10f)
+        {
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, speed);
 
+        }
+        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -10f)
+        {
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -speed);
 
-
-                }
-
-                else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -10f)
-                {
-                    this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -speed);
-
-                }
-                else this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -0f);
-                */
+        }
+        else
+        {
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+        }
+                
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
