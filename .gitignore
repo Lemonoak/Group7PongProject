@@ -50,3 +50,6 @@ BuildTest/
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Unity Library files
+Library/
