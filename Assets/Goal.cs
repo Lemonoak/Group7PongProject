@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Goal : MonoBehaviour
 {
 
     public string GoalName = "Goal";
 
-    private BallMovement Balli;
+    private BallMovement Score;
 
-
+    public Text ScoreText;
+    float CurrentScore;
     
 
     // Start is called before the first frame update
@@ -21,14 +23,16 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Balli = GameObject.FindObjectOfType<BallMovement>();
+        Score = GameObject.FindObjectOfType<BallMovement>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Scoring is currently handled by the ball so this is redundant
         if (collision.gameObject.tag == "Ball")
         {
-            Debug.Log("Score" + Balli.CurrentBallSpeed);
+            CurrentScore += Score.CurrentBallSpeed;
+            ScoreText.text = CurrentScore.ToString();
+            Debug.Log("Score" + Score.CurrentBallSpeed);
         }
     }
 
