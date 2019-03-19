@@ -487,6 +487,21 @@ PrefabInstance:
       propertyPath: movementkey
       value: Movement1
       objectReference: {fileID: 0}
+    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.39
+      objectReference: {fileID: 0}
     - target: {fileID: 7745380947263837872, guid: acd3c9ea2408aef42b9647dadd1096ea,
         type: 3}
       propertyPath: m_Simulated
@@ -511,21 +526,6 @@ PrefabInstance:
         type: 3}
       propertyPath: movementkey
       value: Push1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 4534732654086801052, guid: acd3c9ea2408aef42b9647dadd1096ea,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd3c9ea2408aef42b9647dadd1096ea, type: 3}
@@ -6813,6 +6813,7 @@ GameObject:
   - component: {fileID: 1132062697}
   - component: {fileID: 1132062696}
   - component: {fileID: 1132062695}
+  - component: {fileID: 1132062698}
   m_Layer: 0
   m_Name: MainCameraSeeEverything
   m_TagString: MainCamera
@@ -6884,6 +6885,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1132062698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132062694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a05750fb016fc46befc67d034789d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleTime: 3
 --- !u!1 &1177157962
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,6 +7890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 3269149134596634306, guid: acd3c9ea2408aef42b9647dadd1096ea, type: 3}
   AISpeed: 5
+  movementkey: Movement1
 --- !u!1 &1677287313
 GameObject:
   m_ObjectHideFlags: 0
