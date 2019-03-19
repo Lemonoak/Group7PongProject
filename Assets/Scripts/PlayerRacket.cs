@@ -7,6 +7,7 @@ public class PlayerRacket : MonoBehaviour
     public string movementkey;
     public float PushForce = 0.0f;
     public bool BallIsInside = false;
+    private GameObject Ball;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class PlayerRacket : MonoBehaviour
             if(Input.GetButtonDown(movementkey))
             {
                 Debug.Log("Tried to push");
+                Ball.GetComponent<BallMovement>().AddSpeed();
             }
         }
 
@@ -31,6 +33,7 @@ public class PlayerRacket : MonoBehaviour
         if(collision.tag == "Ball")
         {
             BallIsInside = true;
+            Ball = collision.gameObject;
             Debug.Log("Found Ball");
         }
     }

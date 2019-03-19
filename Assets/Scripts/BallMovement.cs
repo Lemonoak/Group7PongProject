@@ -24,6 +24,11 @@ public class BallMovement : MonoBehaviour
     float CurrentX = 0.0f;
     float CurrentY = 0.0f;
 
+    bool PlayerSmashed = false;
+
+    float OldVeloctyX;
+    float OldVeloctyY;
+
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -59,7 +64,6 @@ public class BallMovement : MonoBehaviour
             //Debug.Log("  Y   " + CurrentY);
             //Debug.Log("  X   " + CurrentX);
         }
-
         else if (CurrentX < 0)
         {
 
@@ -67,11 +71,7 @@ public class BallMovement : MonoBehaviour
             //Debug.Log("  Ball Speed   X = " + Mathf.Round(CurrentBallSpeed));
             //Debug.Log("  X   " + CurrentX);
             //Debug.Log("  Y   " + CurrentY);
-
-
-
         }
-
         else if (CurrentY < 0)
         {
 
@@ -80,10 +80,6 @@ public class BallMovement : MonoBehaviour
             //Debug.Log("  Y   " + CurrentY);
             //Debug.Log("  X   " + CurrentX);
         }
-
-
-
-
 
     }
 
@@ -111,7 +107,20 @@ public class BallMovement : MonoBehaviour
         else if (collision.tag == "Player")
         {
             Debug.Log("Entered Player");
-            //RB.velocity += new Vector2(RB.velocity.x * HitPlayerSpeedUpValue, RB.velocity.y * HitPlayerSpeedUpValue);
+            //ERROR HANDLING
+            if(PlayerSmashed)
+            {
+                RemoveSpeed();
+            }
+        }
+        else if (collision.tag == "AI")
+        {
+            Debug.Log("Entered AI");
+            //ERROR HANDLING
+            if (PlayerSmashed)
+            {
+                RemoveSpeed();
+            }
         }
         else if (collision.tag == "Goal")
         {
@@ -138,5 +147,19 @@ public class BallMovement : MonoBehaviour
     private void RestartBall()
     {
         Destroy(gameObject);
+    }
+
+    public void AddSpeed()
+    {
+        PlayerSmashed = true;
+        OldVeloctyX = RB.velocity.x;
+        OldVeloctyY = RB.velocity.y;
+        RB.velocity += new Vector2(RB.velocity.x * HitPlayerSpeedUpValue, RB.velocity.y * HitPlayerSpeedUpValue);
+    }
+
+    public void RemoveSpeed()
+    {
+        PlayerSmashed = false;
+        RB.velocity = new Vector2(OldVeloctyX, OldVeloctyY);
     }
 }
