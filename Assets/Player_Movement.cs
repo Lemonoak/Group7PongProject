@@ -10,7 +10,14 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Dopes Player_MOvement run.");
+        if (transform.position.x < 0)
+        {
+            movementkey = "Movement1";
+        }
+        else
+        {
+            movementkey = "Movement2";
+        }
     }
 
     // Update is called once per frame

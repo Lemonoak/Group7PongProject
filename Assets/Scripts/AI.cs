@@ -8,9 +8,11 @@ public class AI : MonoBehaviour
     public GameObject Player;
     private GameObject Ball;
     public float AISpeed = 10.0f;
+    public string movementkey = "Movement1";
 
     void Update()
     {
+
         HandleMovement();
         SpawnPlayer();
     }
@@ -61,9 +63,12 @@ public class AI : MonoBehaviour
         //ERROR HANDLING AND MENU
         if(Player)
         {
-            if (Input.GetButtonDown("Movement2"))
+            if (Input.GetButtonDown(movementkey))
             {
-                Instantiate(Player, transform.position, Quaternion.Euler(0.0f, 0.0f, 90.0f));
+                Instantiate(Player, transform.position, transform.rotation);
+                Debug.Log(movementkey); 
+
+
                 Destroy(gameObject);
             }
         }
