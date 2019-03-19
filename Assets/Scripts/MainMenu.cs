@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 
 public class MainMenu : MonoBehaviour
+ 
 {
+
 
     void Start()
     {
@@ -14,14 +16,15 @@ public class MainMenu : MonoBehaviour
     {
         StartGame1Player();
         StartGame2Player();
-    }
+    
 
+    }
     void StartGame1Player()
     {
         if(Input.GetButtonDown("Start1"))
         {
             Debug.Log("One player start Game");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -30,7 +33,7 @@ public class MainMenu : MonoBehaviour
         if (Input.GetButtonDown("Start2"))
         {
             Debug.Log("TWO player start Game");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
     }
 }
