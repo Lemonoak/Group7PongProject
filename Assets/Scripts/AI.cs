@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AI : MonoBehaviour
 {
@@ -8,15 +9,32 @@ public class AI : MonoBehaviour
     public GameObject Player;
     private GameObject Ball;
     public float AISpeed = 10.0f;
-    public string movementkey = "Movement1";
-
+    public string movementkey;
+    public string specialKey;
+    Scene m_Scene;
+    private void Start()
+    {
+        if (transform.position.x < 0)
+        {
+            specialKey = "Start1";
+            movementkey = "Movement1";
+        }
+        else
+        {
+            specialKey = "Start2";
+            movementkey = "Movement2";
+        }    
+    }
     void Update()
     {
 
         HandleMovement();
         SpawnPlayer();
     }
-
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void HandleMovement()
     {
         //For the ai on the right monitor
@@ -63,13 +81,12 @@ public class AI : MonoBehaviour
         //ERROR HANDLING AND MENU
         if(Player)
         {
-            if (Input.GetButtonDown(movementkey))
+            if (Input.GetButtonDown(specialKey))
             {
-                Instantiate(Player, transform.position, transform.rotation);
-                Debug.Log(movementkey); 
-
-
-                Destroy(gameObject);
+                SceneManager.LoadScene(0);
+                //Instantiate(Player, transform.position, transform.rotation);
+                //Debug.Log(movementkey); 
+                //Destroy(gameObject);
             }
         }
     }
