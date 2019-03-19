@@ -12,6 +12,8 @@ public class AI : MonoBehaviour
     public string movementkey;
     public string specialKey;
     Scene m_Scene;
+    bool hasNewPlayer;
+    string curentScence = "";
     private void Start()
     {
         if (transform.position.x < 0)
@@ -30,6 +32,7 @@ public class AI : MonoBehaviour
 
         HandleMovement();
         SpawnPlayer();
+
     }
     private void Awake()
     {
@@ -84,10 +87,21 @@ public class AI : MonoBehaviour
             if (Input.GetButtonDown(specialKey))
             {
                 SceneManager.LoadScene(0);
-                //Instantiate(Player, transform.position, transform.rotation);
-                //Debug.Log(movementkey); 
-                //Destroy(gameObject);
+                Instantiate(Player, new Vector2(transform.position.x,0), transform.rotation);
+                Destroy(gameObject);
             }
+        }
+    }
+
+    void MenuSelfReset()
+    {
+        if (SceneManager.GetActiveScene().name != curentScence && curentScence == "TestScene3")
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            curentScence = SceneManager.GetActiveScene().name;
         }
     }
 

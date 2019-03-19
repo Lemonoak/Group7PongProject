@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementkey: Movement1
   speed: 10
+  aI: {fileID: 7648407154183406145, guid: f9e3fd02f6072d345a11e43b66a27097, type: 3}
 --- !u!61 &4534732654086801052
 BoxCollider2D:
   m_ObjectHideFlags: 0
