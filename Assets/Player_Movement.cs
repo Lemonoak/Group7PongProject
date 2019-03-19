@@ -10,7 +10,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Debug.Log("Dopes Player_MOvement run.");
     }
 
     // Update is called once per frame
@@ -56,12 +56,12 @@ public class Player_Movement : MonoBehaviour
                     this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 }
   */
-        if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 10f)
+        if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 4.5f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, speed);
 
         }
-        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -10f)
+        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -4.5f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -speed);
 
