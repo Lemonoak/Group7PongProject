@@ -11,6 +11,7 @@ public class GameRestart : MonoBehaviour
     void Start()
     {
         restartTime = Time.fixedTime;
+        idleTime = 100000;
     }
 
     // Update is called once per frame
