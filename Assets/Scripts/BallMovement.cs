@@ -21,6 +21,8 @@ public class BallMovement : MonoBehaviour
     //the speed the balls starts with on the X axis, the Y is also this value but divided by 2
     public float StartSpeed = 1.0f;
 
+    public ScoreBoard board;
+
     float CurrentX = 0.0f;
     float CurrentY = 0.0f;
 
@@ -127,26 +129,21 @@ public class BallMovement : MonoBehaviour
             //ERROR HANDLING
             if (collision.GetComponent<Goal>() != null)
             {
-                if (collision.GetComponent<Goal>().GoalName == "Goal1")
+                if (transform.position.x < 0)
                 {
-                    Debug.Log("Player 2 Scored");
-                    RestartBall();
+                    board.scored(2, 100);
                 }
-                else if (collision.GetComponent<Goal>().GoalName == "Goal2")
+                else
                 {
-                    Debug.Log("Player 1 Scored");
-                    RestartBall();
+                    board.scored(1, 100);
                 }
+                Destroy(gameObject);
             }
             else
             {
                 Debug.Log("Goal is missing goal component or has the wrong GoalName");
             }
         }
-    }
-    private void RestartBall()
-    {
-        Destroy(gameObject);
     }
 
     public void AddSpeed()

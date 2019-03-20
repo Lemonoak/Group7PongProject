@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Player_Movement : MonoBehaviour
 {
     public string movementkey;
+    public string exitkey;
     public float speed=10f;
+
     public GameObject aI;
 
     // Start is called before the first frame update
@@ -15,10 +17,12 @@ public class Player_Movement : MonoBehaviour
         if (transform.position.x < 0)
         {
             movementkey = "Movement1";
+            exitkey = "Return1";
         }
         else
         {
             movementkey = "Movement2";
+            exitkey = "Return2";
         }
     }
 
@@ -46,6 +50,10 @@ public class Player_Movement : MonoBehaviour
         else
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+        }
+        if (Input.GetButtonDown(exitkey))
+        {
+            SceneManager.LoadScene(1);
         }
         if (SceneManager.GetActiveScene().name != "TestScene3")
         {

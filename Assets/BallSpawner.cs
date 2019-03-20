@@ -32,8 +32,9 @@ public class BallSpawner : MonoBehaviour
     {
         if(spawnedObject == null)
         {
-            SpawnBall();
+            //SpawnBall();
             //ERROR HANDLING
+            //Need Fix Prob Yo
             if (AIReference.Length == 1)
             {
                 AIReference[0].GetComponent<AI>().GetBall();
