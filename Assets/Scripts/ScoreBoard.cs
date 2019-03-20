@@ -9,6 +9,7 @@ public class ScoreBoard : MonoBehaviour
     public TMP_Text scoreboardPlayer2;
     public List<Collectables> player1Icons;
     public List<Collectables> player2Icons;
+    private int PlayerScoar = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +64,18 @@ public class ScoreBoard : MonoBehaviour
         for (int i = 0; i < icons.Count; i++)
         {
             icons[i].TurnOf();
+
+        }
+    }
+    public void scored (int playerGoal, float score) // score is standin
+    {
+        PlayerScoar = playerGoal;
+        if (playerGoal  == 1)
+        {
+
+        }
+        else
+        {
 
         }
     }
