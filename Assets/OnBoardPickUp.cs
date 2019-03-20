@@ -5,7 +5,9 @@ using UnityEngine;
 public class OnBoardPickUp : MonoBehaviour
 {
     public bool isOn;
+    public int pickuptype;
     SpriteRenderer m_SpriteRenderer;
+    public ScoreBoard myMama;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,11 @@ public class OnBoardPickUp : MonoBehaviour
         {
             TurnOf();
         }
+        if(isOn)
+        {
+            myMama.BabyGotHit(collision.gameObject, pickuptype);
+        }
+        
     }
     public void TurnOn()
     {
