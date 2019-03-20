@@ -5,27 +5,46 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour
 {
-    int playerScore;
-    int newScore;
+    int playerScore = 0;
+    int newScore = 0;
+    float change = 0;
+    bool gaining = false;
+    public float ScoreSpeed = 0.1f;
     //TextMeshPro textComp;
     TextMeshProUGUI textPro;
+    public ScoreBoard board;
     // Start is called before the first frame update
     void Start()
     {
         textPro= GetComponent<TextMeshProUGUI>();
-       // textComp = GetComponent<TextMeshPro>();
+        textPro.text = playerScore.ToString() + "00";
+        // textComp = GetComponent<TextMeshPro>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        textPro.text = newScore.ToString() + "00";
-       // textComp.text = "Steve";
+        if (playerScore >= newScore && gaining)
+        {
+            newScore = playerScore;
+            textPro.text = playerScore.ToString() + "00";
+            Debug.Log("IN SCoreScriPT");
+            board.DoneScoring();
+            gaining = false;
+
+        }
+        else if (playerScore < newScore)
+        {
+            playerScore += Mathf.FloorToInt(change);
+            textPro.text = playerScore.ToString() + "00";
+        }
 
     }
    
-    void NewScoreAdd(float score)
+    public void NewScoreAdd(float score)
     {
-        newScore = Mathf.FloorToInt(score);
+        change = Mathf.FloorToInt(score * ScoreSpeed);
+        newScore = Mathf.FloorToInt(score + playerScore);
+        gaining = true;
     }
 }

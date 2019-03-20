@@ -132,8 +132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 9160729182158514494, guid: 152035231bd5f92468e19de549081952, type: 3}
-  Ball: {fileID: 0}
+  Ball: {fileID: 1682644557568951634}
   CurrentBallSpeed: 0
   SpeedUpValue: 0.001
   HitPlayerSpeedUpValue: 1
   StartSpeed: 500
+  board: {fileID: 0}

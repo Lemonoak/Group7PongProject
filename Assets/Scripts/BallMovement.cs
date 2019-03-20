@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BallMovement : MonoBehaviour
 {
-
+    public ScoreBoard board;
     private Rigidbody2D RB;
     public GameObject spawner;
     //for the AI to see the ball
@@ -21,7 +21,7 @@ public class BallMovement : MonoBehaviour
     //the speed the balls starts with on the X axis, the Y is also this value but divided by 2
     public float StartSpeed = 1.0f;
 
-    public ScoreBoard board;
+    
 
     float CurrentX = 0.0f;
     float CurrentY = 0.0f;
@@ -102,8 +102,8 @@ public class BallMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PickUp")
-        {
+        if (collision.tag == "PickUp" && collision.GetComponent<OnBoardPickUp>().isOn)
+        {            
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
         }
         else if (collision.tag == "Player")
@@ -129,13 +129,14 @@ public class BallMovement : MonoBehaviour
             //ERROR HANDLING
             if (collision.GetComponent<Goal>() != null)
             {
+
                 if (transform.position.x < 0)
                 {
-                    board.scored(2, 100);
+                    board.Scored(2, Mathf.Abs(RB.velocity.x) + Mathf.Abs(RB.velocity.y));
                 }
                 else
                 {
-                    board.scored(1, 100);
+                    board.Scored(1, Mathf.Abs(RB.velocity.x) + Mathf.Abs(RB.velocity.y));
                 }
                 Destroy(gameObject);
             }

@@ -5,15 +5,19 @@ using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public TMP_Text scoreboardPlayer1;
-    public TMP_Text scoreboardPlayer2;
+    public ScoreScript scoreboardPlayer1;
+    public ScoreScript scoreboardPlayer2;
+
+    public ArmAnimationCode MonkeyArmP1;
+    public ArmAnimationCode MonkeyArmP2;
+
     public List<Collectables> player1Icons;
     public List<Collectables> player2Icons;
-    private int PlayerScoar = 1;
+    public int PlayerScoar = 1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        DoneScoring();
     }
 
     // Update is called once per frame
@@ -67,16 +71,28 @@ public class ScoreBoard : MonoBehaviour
 
         }
     }
-    public void scored (int playerGoal, float score) // score is standin
+    public void Scored (int playerGoal, float score) // score is standin
     {
         PlayerScoar = playerGoal;
-        if (playerGoal  == 1)
+        if (playerGoal == 1)
         {
-
+            scoreboardPlayer1.NewScoreAdd(score);
         }
         else
         {
-
+            scoreboardPlayer2.NewScoreAdd(score);
+        }
+    }
+    public void DoneScoring ()
+    {
+        //Debug.Log("What?");
+        if (PlayerScoar == 1)
+        {
+            MonkeyArmP1.MoveArmAnimation();
+        }
+        else
+        {
+            MonkeyArmP1.MoveArmAnimation();
         }
     }
 }
