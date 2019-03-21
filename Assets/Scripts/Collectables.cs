@@ -14,9 +14,7 @@ public class Collectables : MonoBehaviour
         TurnOf();
     }
     private void Awake()
-    {
-        
-
+    {      
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -27,6 +25,7 @@ public class Collectables : MonoBehaviour
     }
     public void TurnOn()
     {
+        Debug.Log("GotHere");
         m_SpriteRenderer.color = Color.white;
         isOn = true;
     }

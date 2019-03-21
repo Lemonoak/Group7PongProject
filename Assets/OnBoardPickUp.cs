@@ -34,14 +34,11 @@ public class OnBoardPickUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball" && isOn)
         {
+            Debug.Log("GotHere");
             tickSource.Play();
+            myMama.BabyGotHit(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x, pickuptype);
             TurnOf();
-        }
-        if(isOn)
-        {
-            myMama.BabyGotHit(collision.gameObject, pickuptype);
-        }
-        
+        }       
     }
     public void TurnOn()
     {

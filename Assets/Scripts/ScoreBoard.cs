@@ -28,10 +28,11 @@ public class ScoreBoard : MonoBehaviour
     {
         
     }
-    public void BabyGotHit(GameObject ball, int pickuptype)
+    public void BabyGotHit(float ballSpeed, int pickuptype)
     {
-        if (ball.GetComponent<Rigidbody2D>().velocity.x > 0)
-        {
+        
+        if (ballSpeed > 0)
+        {          
             player1Icons[pickuptype].TurnOn();
             if (HasColected(player1Icons))
             {
