@@ -6,11 +6,11 @@ public class Goal : MonoBehaviour
 {
 
     public string GoalName = "Goal";
-    public AudioSource tickSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        tickSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -22,11 +22,9 @@ public class Goal : MonoBehaviour
     {
         //Scoring is currently handled by the ball so this is redundant
         if (collision.gameObject.tag == "Ball")
-            tickSource.Play();
         {
             Debug.Log("Score");
-           
-}
+        }
     }
 
 }

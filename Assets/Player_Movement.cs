@@ -37,12 +37,12 @@ public class Player_Movement : MonoBehaviour
 
         //this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10f * Input.GetAxis(movementkey));
 
-        if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 4.5f)
+        if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 3f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, speed);
 
         }
-        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -4.5f)
+        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -3f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -speed);
 
@@ -55,7 +55,7 @@ public class Player_Movement : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-        if (SceneManager.GetActiveScene().name != "lilly_3")
+        if (SceneManager.GetActiveScene().name != "TestScene3")
         {
             Destroy(gameObject);
         }   

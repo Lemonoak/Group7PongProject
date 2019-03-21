@@ -5,22 +5,24 @@ using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public ScoreScript scoreboardPlayer1;
-    public ScoreScript scoreboardPlayer2;
-
-    public ArmAnimationCode MonkeyArmP1;
-    public ArmAnimationCode MonkeyArmP2;
-
+    public TMP_Text scoreboardPlayer1;
+    public TMP_Text scoreboardPlayer2;
     public List<Collectables> player1Icons;
     public List<Collectables> player2Icons;
+<<<<<<< HEAD
 
     public PickUpSpawner pickupManager;
 
+    public GameObject music;
+
     public int PlayerScoar = 1;
+=======
+    private int PlayerScoar = 1;
+>>>>>>> parent of 88c25d1... unchecked warnings
     // Start is called before the first frame update
     void Start()
     {
-        DoneScoring();
+        
     }
 
     // Update is called once per frame
@@ -74,33 +76,17 @@ public class ScoreBoard : MonoBehaviour
 
         }
     }
-    public void Scored (int playerGoal, float score) // score is standin
+    public void scored (int playerGoal, float score) // score is standin
     {
+        music.GetComponent<AudioSource>().Pause();
         PlayerScoar = playerGoal;
-        if (PlayerScoar == 1)
+        if (playerGoal  == 1)
         {
-            scoreboardPlayer1.NewScoreAdd(score);
+
         }
         else
         {
-            scoreboardPlayer2.NewScoreAdd(score);
+
         }
-    }
-    public void DoneScoring ()
-    {
-        if (PlayerScoar == 1)
-        {            
-            MonkeyArmP1.MoveArmAnimation();
-        }
-        else
-        {
-            MonkeyArmP2.MoveArmAnimation();
-        }
-        ResetTheBoard();
-    }
-    void ResetTheBoard()
-    {
-        TurnOfAll();
-        pickupManager.TurnOfAll();
     }
 }
