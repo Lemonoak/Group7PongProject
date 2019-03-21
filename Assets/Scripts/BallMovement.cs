@@ -101,13 +101,12 @@ public class BallMovement : MonoBehaviour
             RB.AddForce(new Vector2(-StartSpeed, -StartSpeed / 2));
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+            tickSource.Play();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
-        {
-            tickSource.Play();
-        }
         if (collision.tag == "PickUp" && collision.GetComponent<OnBoardPickUp>().isOn)
         {            
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);

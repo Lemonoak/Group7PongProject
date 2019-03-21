@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
+    
     public bool isOn;
     SpriteRenderer m_SpriteRenderer;
     // Start is called before the first frame update
@@ -14,6 +15,8 @@ public class Collectables : MonoBehaviour
     }
     private void Awake()
     {
+        
+
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -31,5 +34,6 @@ public class Collectables : MonoBehaviour
     {
         m_SpriteRenderer.color = Color.grey;
         isOn = false;
+
     }
 }
