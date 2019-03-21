@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class OnBoardPickUp : MonoBehaviour
 {
+    public AudioSource tickSource;
     public bool isOn;
     public int pickuptype;
     SpriteRenderer m_SpriteRenderer;
@@ -11,6 +13,8 @@ public class OnBoardPickUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tickSource = GetComponent<AudioSource>();
+
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         TurnOf();
     }
@@ -24,6 +28,7 @@ public class OnBoardPickUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball" && isOn)
         {
+            tickSource.Play();
             TurnOf();
         }
         if(isOn)
