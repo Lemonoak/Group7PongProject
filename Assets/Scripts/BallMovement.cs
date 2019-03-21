@@ -58,17 +58,6 @@ public class BallMovement : MonoBehaviour
         CurrentX = Mathf.Round(RB.velocity.x);
         CurrentY = Mathf.Round(RB.velocity.y);
 
-        void onCollisionEnter (Collision collision)
-        {
-            if (collision.gameObject.tag == "Target") {
-
-                tickSource.Play();
-
-        }
-
-        }
-
-
         //Sets a float to make score depend on velocity
         //CurrentBallSpeed = CurrentX + CurrentY;
 
@@ -115,6 +104,10 @@ public class BallMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Wall")
+        {
+            tickSource.Play();
+        }
         if (collision.tag == "PickUp" && collision.GetComponent<OnBoardPickUp>().isOn)
         {            
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);

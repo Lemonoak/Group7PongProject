@@ -13,10 +13,12 @@ public class ScoreScript : MonoBehaviour
     //TextMeshPro textComp;
     TextMeshProUGUI textPro;
     public ScoreBoard board;
+    public AudioSource tickSource;
     // Start is called before the first frame update
     void Start()
     {
-        textPro= GetComponent<TextMeshProUGUI>();
+        tickSource = GetComponent<AudioSource>();
+        textPro = GetComponent<TextMeshProUGUI>();
         textPro.text = playerScore.ToString() + "00";
         // textComp = GetComponent<TextMeshPro>();
     }
@@ -30,6 +32,7 @@ public class ScoreScript : MonoBehaviour
             textPro.text = playerScore.ToString() + "00";
             Debug.Log("IN SCoreScriPT");
             board.DoneScoring();
+            tickSource.Stop();
             gaining = false;
 
         }
@@ -46,5 +49,6 @@ public class ScoreScript : MonoBehaviour
         change = Mathf.FloorToInt(score * ScoreSpeed);
         newScore = Mathf.FloorToInt(score + playerScore);
         gaining = true;
+        tickSource.Play();
     }
 }

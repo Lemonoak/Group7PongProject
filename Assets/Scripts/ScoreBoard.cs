@@ -13,6 +13,9 @@ public class ScoreBoard : MonoBehaviour
 
     public List<Collectables> player1Icons;
     public List<Collectables> player2Icons;
+
+    public PickUpSpawner pickupManager;
+
     public int PlayerScoar = 1;
     // Start is called before the first frame update
     void Start()
@@ -94,5 +97,11 @@ public class ScoreBoard : MonoBehaviour
         {
             MonkeyArmP2.MoveArmAnimation();
         }
+        ResetTheBoard();
+    }
+    void ResetTheBoard()
+    {
+        TurnOfAll();
+        pickupManager.TurnOfAll();
     }
 }
