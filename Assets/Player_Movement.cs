@@ -55,7 +55,7 @@ public class Player_Movement : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-        if (SceneManager.GetActiveScene().name != "TestScene3")
+        if (SceneManager.GetActiveScene().name != "lilly_3")
         {
             Destroy(gameObject);
         }   
