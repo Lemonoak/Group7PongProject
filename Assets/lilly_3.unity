@@ -3023,7 +3023,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304083813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4c34b95bf5e164ef4992153f5315b820, type: 2}
   m_CullingMode: 0
@@ -15783,6 +15783,7 @@ GameObject:
   - component: {fileID: 1207963391}
   - component: {fileID: 1207963393}
   - component: {fileID: 1207963392}
+  - component: {fileID: 1207963394}
   m_Layer: 0
   m_Name: Tilemap_UI
   m_TagString: Untagged
@@ -25040,6 +25041,25 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!95 &1207963394
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207963390}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6614a896a7fdd4c35842ba5a91705d60, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1210951424
 GameObject:
   m_ObjectHideFlags: 0
@@ -39429,7 +39449,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105776190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6614a896a7fdd4c35842ba5a91705d60, type: 2}
   m_CullingMode: 0
