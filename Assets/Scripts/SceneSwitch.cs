@@ -13,8 +13,6 @@ public class SceneSwitch : MonoBehaviour
     {
         StartGame1Player();
         StartGame2Player();
-
-
     }
     void StartGame1Player()
     {

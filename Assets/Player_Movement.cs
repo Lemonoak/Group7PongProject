@@ -28,7 +28,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -40,12 +40,10 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 3f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, speed);
-
         }
         else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -3f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -speed);
-
         }
         else
         {
@@ -59,10 +57,6 @@ public class Player_Movement : MonoBehaviour
         {
             Destroy(gameObject);
         }   
-
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
 
     }
 }

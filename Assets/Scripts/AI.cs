@@ -14,6 +14,7 @@ public class AI : MonoBehaviour
     Scene m_Scene;
     bool hasNewPlayer;
     string curentScence = "";
+
     private void Start()
     {
         if (transform.position.x < 0)
@@ -29,15 +30,16 @@ public class AI : MonoBehaviour
     }
     void Update()
     {
-
         HandleMovement();
         SpawnPlayer();
-
+        MenuSelfReset();
     }
+
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
+
     void HandleMovement()
     {
         //For the ai on the right monitor
@@ -87,7 +89,7 @@ public class AI : MonoBehaviour
             if (Input.GetButtonDown(specialKey))
             {
                 SceneManager.LoadScene(0);
-                Instantiate(Player, new Vector2(transform.position.x,0), transform.rotation);
+                Instantiate(Player, new Vector2(transform.position.x, 0), transform.rotation);
                 Destroy(gameObject);
             }
         }
@@ -109,5 +111,10 @@ public class AI : MonoBehaviour
     public void GetBall()
     {
         Ball = GameObject.FindGameObjectWithTag("Ball");
+    }
+
+    public void DestroyOnSceneSwitch()
+    {
+        Destroy(gameObject);
     }
 }
