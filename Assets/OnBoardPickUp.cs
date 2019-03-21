@@ -12,13 +12,19 @@ public class OnBoardPickUp : MonoBehaviour
     public ScoreBoard myMama;
     // Start is called before the first frame update
     void Start()
-    {
+    {/*
         tickSource = GetComponent<AudioSource>();
 
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         TurnOf();
+        */
     }
-
+    private void Awake()
+    {
+        tickSource = GetComponent<AudioSource>();
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        TurnOf();
+    }
     // Update is called once per frame
     void Update()
     {
