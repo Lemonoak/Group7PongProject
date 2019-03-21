@@ -30,7 +30,6 @@ public class ScoreScript : MonoBehaviour
         {
             newScore = playerScore;
             textPro.text = playerScore.ToString() + "00";
-            Debug.Log("IN SCoreScriPT");
             board.DoneScoring();
             tickSource.Stop();
             gaining = false;
