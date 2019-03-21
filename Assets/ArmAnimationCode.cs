@@ -11,14 +11,19 @@ public class ArmAnimationCode : MonoBehaviour
     float time;
     bool going = false;
     float startTime;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
+       
     }
     private void Awake()
     {
+        
         aM = GetComponent<Animator>();
         aM.Play("", 0, aM.GetCurrentAnimatorStateInfo(0).length);
+        
     }
     // Update is called once per frame
     void Update()
@@ -30,17 +35,20 @@ public class ArmAnimationCode : MonoBehaviour
             {
                 theSpawner.SpawnBall();
                 going = false;
+                
             }
             
         }
     }
     public void MoveArmAnimation()
     {
+        
         aM.Play("", 0, 0f);
         going = true;
         Debug.Log(aM.GetCurrentAnimatorStateInfo(0).normalizedTime + " is normalizedTime");
         time = Time.fixedTime;
 
+        
         //startTime = aM.GetCurrentAnimatorStateInfo(0).normalizedTime;
     }
 }
