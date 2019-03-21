@@ -7,9 +7,9 @@ public class Player_Movement : MonoBehaviour
 {
     public string movementkey;
     public string exitkey;
+    public string PlayerString;
     public float speed=10f;
-
-    public GameObject aI;
+    public GameObject TextHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +18,13 @@ public class Player_Movement : MonoBehaviour
         {
             movementkey = "Movement1";
             exitkey = "Return1";
+            PlayerString = "Player1";
         }
         else
         {
             movementkey = "Movement2";
             exitkey = "Return2";
+            PlayerString = "Player2";
         }
     }
 
