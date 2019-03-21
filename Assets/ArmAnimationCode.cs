@@ -10,6 +10,7 @@ public class ArmAnimationCode : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public Animation aN;
     float time;
@@ -18,6 +19,10 @@ public class ArmAnimationCode : MonoBehaviour
     public Animation aN;
     float time;
 >>>>>>> parent of 3841ac9... test
+=======
+    public Animation aN;
+    float time;
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 =======
     public Animation aN;
     float time;
@@ -34,6 +39,7 @@ public class ArmAnimationCode : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         aM.enabled = false;
 =======
         aM.Play("", 0, aM.GetCurrentAnimatorStateInfo(0).length);
@@ -44,10 +50,14 @@ public class ArmAnimationCode : MonoBehaviour
 =======
         aM.Play("", 0, aM.GetCurrentAnimatorStateInfo(0).length);
 >>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
+=======
+        aM.Play("", 0, aM.GetCurrentAnimatorStateInfo(0).length);
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
     }
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,15 +73,20 @@ public class ArmAnimationCode : MonoBehaviour
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
         
         if (aM.enabled)
         {
              if (Time.fixedTime > (time + (aM.GetCurrentAnimatorStateInfo(0).length * 0.5)) && going)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 =======
 >>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
             {
@@ -86,12 +101,15 @@ public class ArmAnimationCode : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         aM.enabled = true;
         going = true;
         startTime = aM.GetCurrentAnimatorStateInfo(0).normalizedTime;
 =======
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 =======
 >>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
         aM.Play("", 0, 0f);
@@ -102,9 +120,12 @@ public class ArmAnimationCode : MonoBehaviour
         //startTime = aM.GetCurrentAnimatorStateInfo(0).normalizedTime;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 =======
 >>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
     }

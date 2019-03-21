@@ -7,6 +7,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -27,5 +28,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 >>>>>>> parent of 88c25d1... unchecked warnings
 >>>>>>> parent of 5ee5e95... jh
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 =======
 >>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
