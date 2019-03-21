@@ -8,10 +8,10 @@ public class PlayerRacket : MonoBehaviour
     public float PushForce = 0.0f;
     public bool BallIsInside = false;
     private GameObject Ball;
-
+    public AudioSource tickSource;
     void Start()
     {
-
+        tickSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -19,7 +19,8 @@ public class PlayerRacket : MonoBehaviour
 
         if(BallIsInside)
         {
-            if(Input.GetButtonDown(movementkey))
+            tickSource.Play();
+            if (Input.GetButtonDown(movementkey))
             {
                 Debug.Log("Tried to push");
                 Ball.GetComponent<BallMovement>().AddSpeed();

@@ -16,6 +16,8 @@ public class ScoreBoard : MonoBehaviour
 
     public PickUpSpawner pickupManager;
 
+    public GameObject music;
+
     public int PlayerScoar = 1;
     // Start is called before the first frame update
     void Start()
@@ -76,6 +78,7 @@ public class ScoreBoard : MonoBehaviour
     }
     public void Scored (int playerGoal, float score) // score is standin
     {
+        music.GetComponent<AudioSource>().Pause();
         PlayerScoar = playerGoal;
         if (PlayerScoar == 1)
         {

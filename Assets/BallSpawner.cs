@@ -10,7 +10,8 @@ public class BallSpawner : MonoBehaviour
     GameObject spawnedObject;
     public ScoreBoard scoreBoard;
     public GameObject[] AIReference;
-    
+
+    public GameObject music;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class BallSpawner : MonoBehaviour
     }
     public void SpawnBall()
     {
+        music.GetComponent<AudioSource>().UnPause();
+
         Vector2 tempVector;
         if (scoreBoard.PlayerScoar == 1)
         {
