@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class AI : MonoBehaviour
 {
-
     public GameObject Player;
     private GameObject Ball;
     public float AISpeed = 10.0f;
@@ -26,7 +25,7 @@ public class AI : MonoBehaviour
         {
             specialKey = "Start2";
             movementkey = "Movement2";
-        }    
+        }
     }
     void Update()
     {
@@ -111,10 +110,5 @@ public class AI : MonoBehaviour
     public void GetBall()
     {
         Ball = GameObject.FindGameObjectWithTag("Ball");
-    }
-
-    public void DestroyOnSceneSwitch()
-    {
-        Destroy(gameObject);
     }
 }

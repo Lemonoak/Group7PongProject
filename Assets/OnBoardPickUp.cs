@@ -6,7 +6,7 @@ using UnityEngine;
 public class OnBoardPickUp : MonoBehaviour
 {
     public AudioSource tickSource;
-    public bool isOn;
+    public bool isOn = false;
     public int pickuptype;
     SpriteRenderer m_SpriteRenderer;
     public ScoreBoard myMama;

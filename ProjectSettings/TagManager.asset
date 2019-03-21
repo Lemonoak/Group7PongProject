@@ -9,6 +9,7 @@ TagManager:
   - Goal
   - Wall
   - AI
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

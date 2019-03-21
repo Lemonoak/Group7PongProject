@@ -44,7 +44,7 @@ public class ScoreBoard : MonoBehaviour
         if (ballSpeed > 0)
         {
             if (Time.fixedTime > animationdelay1 + blinktime)
-            {                               
+            {
                 if (HasColected(player1Icons))
                 {
                      scoreboardPlayer1.NewScoreAdd(allPickUpPoints, 0.1f);
@@ -80,7 +80,7 @@ public class ScoreBoard : MonoBehaviour
     }
     public void TurnOfAll()
     {
-        for (int i = 0; i < player1Icons.Count; i++)
+        for (int i = 0; i < player1Icons.Count -1; i++)
         {
             player1Icons[i].TurnOf();
             player2Icons[i].TurnOf();
@@ -88,7 +88,7 @@ public class ScoreBoard : MonoBehaviour
     }
     bool HasColected (List<Collectables> icons)
     {
-        for (int i = 0; i < icons.Count; i++)
+        for (int i = 0; i < icons.Count - 1; i++)
         {
             if (!icons[i].isOn)
             {
@@ -99,7 +99,7 @@ public class ScoreBoard : MonoBehaviour
     }
     void TurnOfScoreSide(List<Collectables> icons)
     {
-        for (int i = 0; i < icons.Count; i++)
+        for (int i = 0; i < icons.Count - 1; i++)
         {
             icons[i].TurnOf();
         }
@@ -143,7 +143,7 @@ public class ScoreBoard : MonoBehaviour
     }
     void StartBlinkingBoys(List<Collectables> icons)
     {
-        for (int i = 0; i < icons.Count; i++)
+        for (int i = 0; i < icons.Count - 1; i++)
         {
             icons[i].StartBlinking();
         }
