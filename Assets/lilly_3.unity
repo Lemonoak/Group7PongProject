@@ -31752,7 +31752,7 @@ GameObject:
   - component: {fileID: 2062317124}
   m_Layer: 0
   m_Name: LevelBlocks
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37225,27 +37225,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: ballSpawnPoint1
-      value: 
-      objectReference: {fileID: 1702471718}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: ballSpawnPoint2
-      value: 
-      objectReference: {fileID: 921336124}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: spawnrefObject
-      value: 
-      objectReference: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
-        type: 3}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: scoreBoard
-      value: 
-      objectReference: {fileID: 1210951425}
     - target: {fileID: 65580625414687242, guid: 152035231bd5f92468e19de549081952,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37301,6 +37280,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: ballSpawnPoint1
+      value: 
+      objectReference: {fileID: 1702471718}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: ballSpawnPoint2
+      value: 
+      objectReference: {fileID: 921336124}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: spawnrefObject
+      value: 
+      objectReference: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
+        type: 3}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: scoreBoard
+      value: 
+      objectReference: {fileID: 1210951425}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152035231bd5f92468e19de549081952, type: 3}
 --- !u!1001 &2618850752908938384

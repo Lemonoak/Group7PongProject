@@ -139,6 +139,7 @@ MonoBehaviour:
   SpeedUpValue: 0.001
   HitPlayerSpeedUpValue: 1
   StartSpeed: 500
+  tickSource: {fileID: 0}
 --- !u!82 &174658866631747853
 AudioSource:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4d8efbb8f94340c42bc5c8fd898f9de1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
