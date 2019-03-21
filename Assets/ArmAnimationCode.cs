@@ -45,7 +45,7 @@ public class ArmAnimationCode : MonoBehaviour
         
         aM.Play("", 0, 0f);
         going = true;
-        Debug.Log(aM.GetCurrentAnimatorStateInfo(0).normalizedTime + " is normalizedTime");
+        
         time = Time.fixedTime;
 
         
