@@ -4566,7 +4566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 76, y: 177}
+  m_AnchoredPosition: {x: 160, y: 148}
   m_SizeDelta: {x: 275.59998, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597946709
@@ -6202,7 +6202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -75, y: -163}
+  m_AnchoredPosition: {x: -163, y: -150}
   m_SizeDelta: {x: 275.59998, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799295064
@@ -37587,6 +37587,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: ballSpawnPoint1
+      value: 
+      objectReference: {fileID: 1702471718}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: ballSpawnPoint2
+      value: 
+      objectReference: {fileID: 921336124}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: spawnrefObject
+      value: 
+      objectReference: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
+        type: 3}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: scoreBoard
+      value: 
+      objectReference: {fileID: 1210951425}
     - target: {fileID: 65580625414687242, guid: 152035231bd5f92468e19de549081952,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37642,27 +37663,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: ballSpawnPoint1
-      value: 
-      objectReference: {fileID: 1702471718}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: ballSpawnPoint2
-      value: 
-      objectReference: {fileID: 921336124}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: spawnrefObject
-      value: 
-      objectReference: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
-        type: 3}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: scoreBoard
-      value: 
-      objectReference: {fileID: 1210951425}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152035231bd5f92468e19de549081952, type: 3}
 --- !u!1001 &2618850752908938384
