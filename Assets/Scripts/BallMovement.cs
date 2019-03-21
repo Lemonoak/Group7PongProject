@@ -20,8 +20,8 @@ public class BallMovement : MonoBehaviour
 
     //the speed the balls starts with on the X axis, the Y is also this value but divided by 2
     public float StartSpeed = 1.0f;
+    public AudioSource tickSource;
 
-    
 
     float CurrentX = 0.0f;
     float CurrentY = 0.0f;
@@ -33,6 +33,9 @@ public class BallMovement : MonoBehaviour
 
     void Start()
     {
+
+        tickSource = GetComponent<AudioSource>();
+
         RB = GetComponent<Rigidbody2D>();
         Ball = gameObject;
         //Randomzies direction to start and adds force on the ball
@@ -54,6 +57,15 @@ public class BallMovement : MonoBehaviour
 
         CurrentX = Mathf.Round(RB.velocity.x);
         CurrentY = Mathf.Round(RB.velocity.y);
+
+        void onCollisionEnter (Collision collision){
+            if (collision.gameObject.tag == "Target") {
+
+                tickSource.Play();
+
+        }
+
+        }
 
 
         //Sets a float to make score depend on velocity
