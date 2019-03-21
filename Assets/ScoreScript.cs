@@ -29,6 +29,7 @@ public class ScoreScript : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         textPro.text = newScore.ToString() + "00";
        // textComp.text = "Steve";
 =======
@@ -36,10 +37,13 @@ public class ScoreScript : MonoBehaviour
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
         if (playerScore >= newScore && gaining)
         {
             newScore = playerScore;
             textPro.text = playerScore.ToString() + "00";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             Debug.Log("IN SCoreScriPT");
@@ -47,6 +51,8 @@ public class ScoreScript : MonoBehaviour
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
             board.DoneScoring();
             tickSource.Stop();
             gaining = false;
@@ -59,11 +65,14 @@ public class ScoreScript : MonoBehaviour
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 3e7b027... woho
 =======
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 
     }
    

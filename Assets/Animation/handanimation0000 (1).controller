@@ -84,6 +84,7 @@ AnimatorStateMachine:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Position: {x: 200, y: 0, z: 0}
 =======
     m_Position: {x: 204, y: 0, z: 0}
@@ -94,6 +95,9 @@ AnimatorStateMachine:
 =======
     m_Position: {x: 228, y: 48, z: 0}
 >>>>>>> parent of 3841ac9... test
+=======
+    m_Position: {x: 228, y: 48, z: 0}
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 1101986919865667256}

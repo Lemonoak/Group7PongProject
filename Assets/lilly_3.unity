@@ -745,6 +745,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 30
 =======
   m_RootOrder: 34
@@ -921,6 +922,11 @@ Transform:
   m_RootOrder: 129
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &107444883
+=======
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &83160066
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2060,6 +2066,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 270298019}
   m_Enabled: 1
   m_CastShadows: 0
@@ -2141,6 +2148,8 @@ SpriteRenderer:
   m_PrefabAsset: {fileID: 0}
 =======
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_GameObject: {fileID: 285317907}
   m_Enabled: 1
   m_CastShadows: 0
@@ -3345,6 +3354,8 @@ Transform:
   m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &423958404
+<<<<<<< HEAD
+=======
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3421,15 +3432,10 @@ Transform:
   m_LocalScale: {x: -0.9884992, y: 1.9177923, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!1 &423958404
-=======
   m_RootOrder: 171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270.186}
 --- !u!1 &435840661
->>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3507,14 +3513,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
-  m_RootOrder: 170
+<<<<<<< HEAD
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &423958404
+=======
+  m_RootOrder: 171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270.186}
 --- !u!1 &435840661
+>>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
 =======
   m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360.031}
 --- !u!1 &436814958
->>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3592,14 +3604,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
-  m_RootOrder: 76
+<<<<<<< HEAD
+  m_RootOrder: 170
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270.186}
+--- !u!1 &435840661
+=======
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360.031}
 --- !u!1 &436814958
+>>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
 =======
   m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.03099}
 --- !u!1 &447946111
->>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3622,6 +3640,173 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447946111}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300048, guid: 03aec1a89578c4bf9b659b5db4ce3bf2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.29, y: 4.28}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &447946113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447946111}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.89, y: 4.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_RootOrder: 76
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360.031}
+--- !u!1 &436814958
+=======
+  m_RootOrder: 69
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.03099}
+--- !u!1 &447946111
+>>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1001 &469321076
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8032272557811396801, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_Name
+      value: PickUp1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.14550781
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710474
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.70710886
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897031048797478897, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138044912715113551, guid: e8ddc38e5c79aac418e7facc92ca5dd1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300016, guid: 59a3561e9aac7a443a88c03f193fa2e2,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8ddc38e5c79aac418e7facc92ca5dd1, type: 3}
+--- !u!1 &484424458
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 484424460}
+  - component: {fileID: 484424459}
+  m_Layer: 0
+  m_Name: sprites_Art_21 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &484424459
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 447946111}
   m_Enabled: 1
   m_CastShadows: 0
@@ -3784,6 +3969,9 @@ SpriteRenderer:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
   m_GameObject: {fileID: 447946111}
+=======
+  m_GameObject: {fileID: 484424458}
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -3837,6 +4025,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &469321076
@@ -3994,6 +4183,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 84
+=======
+  m_RootOrder: 85
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &507216307
 GameObject:
@@ -4326,10 +4518,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 29
 =======
   m_RootOrder: 33
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 33
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &559407704
 GameObject:
@@ -4409,10 +4605,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 39
 =======
   m_RootOrder: 43
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 43
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &574293889
 GameObject:
@@ -4725,10 +4925,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 35
 =======
   m_RootOrder: 39
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 39
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &591094901
 GameObject:
@@ -6133,10 +6337,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 40
 =======
   m_RootOrder: 44
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 44
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &740412195
 GameObject:
@@ -12219,10 +12427,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 21
 =======
   m_RootOrder: 26
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 26
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &920379047
 GameObject:
@@ -12663,10 +12875,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 37
 =======
   m_RootOrder: 41
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 41
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &972871734
 GameObject:
@@ -13092,10 +13308,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 34
 =======
   m_RootOrder: 38
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 38
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1045286277
 GameObject:
@@ -24892,10 +25112,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 38
 =======
   m_RootOrder: 42
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 42
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1276010653
 GameObject:
@@ -24975,10 +25199,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 43
 =======
   m_RootOrder: 46
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 46
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1276564664
 GameObject:
@@ -25153,10 +25381,14 @@ RectTransform:
   - {fileID: 1329832957}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 24
 =======
   m_RootOrder: 29
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 29
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -25562,6 +25794,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329832956}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!1 &1344610084
 GameObject:
   m_ObjectHideFlags: 0
@@ -25664,6 +25897,9 @@ Transform:
   m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1316371696
+=======
+--- !u!1 &1345624255
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26195,10 +26431,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 25
 =======
       value: 30
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+      value: 30
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
       objectReference: {fileID: 0}
     - target: {fileID: 8043712878042597842, guid: 03fb9a11ace588942bdb0600bba00cf0,
         type: 3}
@@ -26218,11 +26458,14 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
     - target: {fileID: 8043712878042597840, guid: 03fb9a11ace588942bdb0600bba00cf0,
         type: 3}
       propertyPath: Ball
@@ -26231,10 +26474,13 @@ PrefabInstance:
         type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 3e7b027... woho
 =======
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
     - target: {fileID: 8043712878042597843, guid: 03fb9a11ace588942bdb0600bba00cf0,
         type: 3}
       propertyPath: m_Color.r
@@ -26251,9 +26497,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03fb9a11ace588942bdb0600bba00cf0, type: 3}
 --- !u!1 &1367416981
@@ -27495,6 +27744,7 @@ Transform:
   m_RootOrder: 144
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1507258439
 GameObject:
   m_ObjectHideFlags: 0
@@ -27596,6 +27846,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 =======
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 --- !u!1 &1526032384
 GameObject:
   m_ObjectHideFlags: 0
@@ -28287,10 +28539,14 @@ RectTransform:
   - {fileID: 1177157963}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 22
 =======
   m_RootOrder: 27
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 27
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29460,10 +29716,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 41
 =======
   m_RootOrder: 45
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 45
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1643588609 stripped
 MonoBehaviour:
@@ -29634,10 +29894,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 31
 =======
   m_RootOrder: 35
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 35
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1665294711
 GameObject:
@@ -29717,10 +29981,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 32
 =======
   m_RootOrder: 36
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 36
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1677721909
 GameObject:
@@ -29951,10 +30219,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 23
 =======
   m_RootOrder: 28
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 28
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709029851
 GameObject:
@@ -30113,10 +30385,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 36
 =======
   m_RootOrder: 40
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 40
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1713499447
 GameObject:
@@ -30560,10 +30836,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 27
 =======
   m_RootOrder: 32
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 32
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1001 &1809964701
 PrefabInstance:
@@ -33176,10 +33456,14 @@ Transform:
   - {fileID: 1063016795}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 8
 =======
   m_RootOrder: 16
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 16
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2070993285 stripped
 MonoBehaviour:
@@ -33350,10 +33634,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 26
 =======
   m_RootOrder: 31
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+  m_RootOrder: 31
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &2105776190
 GameObject:
@@ -38456,6 +38744,7 @@ Transform:
   m_RootOrder: 127
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &2131248502
 GameObject:
   m_ObjectHideFlags: 0
@@ -38537,6 +38826,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 =======
 >>>>>>> 3e7b0278112a09b74244f5429578bb0d2bb56d31
+=======
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
 --- !u!1 &2137326783
 GameObject:
   m_ObjectHideFlags: 0
@@ -39163,6 +39454,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1079246589}
     - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
+<<<<<<< HEAD
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.81
@@ -39194,6 +39486,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
         type: 3}
+=======
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+>>>>>>> parent of dd3815f... Merge branch 'master' of https://github.com/Lemonoak/Group7PongProject
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
