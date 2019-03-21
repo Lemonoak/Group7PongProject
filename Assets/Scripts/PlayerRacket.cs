@@ -13,6 +13,15 @@ public class PlayerRacket : MonoBehaviour
     void Start()
     {
         tickSource = GetComponent<AudioSource>();
+
+        if (transform.position.x < 0)
+        {
+            movementkey = "Push1";
+        }
+        else
+        {
+            movementkey = "Push2";
+        }
     }
 
     void Update()
