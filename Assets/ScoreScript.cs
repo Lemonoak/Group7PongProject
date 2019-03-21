@@ -17,6 +17,7 @@ public class ScoreScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ScoreSpeed = 0.1f;
         tickSource = GetComponent<AudioSource>();
         textPro = GetComponent<TextMeshProUGUI>();
         textPro.text = playerScore.ToString() + "00";
@@ -28,12 +29,12 @@ public class ScoreScript : MonoBehaviour
     {
         if (playerScore >= newScore && gaining)
         {
-            newScore = playerScore;
-            textPro.text = playerScore.ToString() + "00";
-            board.DoneScoring();
+            playerScore = newScore;
+            textPro.text = playerScore.ToString() + "00";            
             tickSource.Stop();
             gaining = false;
 
+            board.DoneScoring();
         }
         else if (playerScore < newScore)
         {
@@ -43,10 +44,11 @@ public class ScoreScript : MonoBehaviour
 
     }
    
-    public void NewScoreAdd(float score)
+    public void NewScoreAdd(float score, float Speed)
     {
-        change = Mathf.FloorToInt(score * ScoreSpeed);
-        newScore = Mathf.FloorToInt(score + playerScore);
+        ScoreSpeed = Speed;
+        change = Mathf.FloorToInt(score * ScoreSpeed * 1);
+        newScore = Mathf.FloorToInt(newScore + (score * 1));
         gaining = true;
         tickSource.Play();
     }

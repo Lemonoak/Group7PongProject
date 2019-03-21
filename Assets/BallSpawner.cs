@@ -10,7 +10,8 @@ public class BallSpawner : MonoBehaviour
     GameObject spawnedObject;
     public ScoreBoard scoreBoard;
     public GameObject[] AIReference;
-    
+    public GameObject musk;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class BallSpawner : MonoBehaviour
     }
     public void SpawnBall()
     {
+        // musk.GetComponent<AudioSource>().UnPause();
+        musk.GetComponent<AudioSource>().volume = 1f;
         Vector2 tempVector;
         if (scoreBoard.PlayerScoar == 1)
         {

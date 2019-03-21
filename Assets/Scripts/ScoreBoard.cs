@@ -16,11 +16,20 @@ public class ScoreBoard : MonoBehaviour
 
     public PickUpSpawner pickupManager;
 
+    public float pickUpPoints = 250;
+    public GameObject musk;
+
+    bool hasScored = true;
+    float blinktime;
+    float animationdelay1;
+    float animationdelay2;
     public int PlayerScoar = 1;
     // Start is called before the first frame update
     void Start()
     {
         DoneScoring();
+        blinktime = player1Icons[0].animationLenght;
+
     }
 
     // Update is called once per frame
@@ -32,19 +41,29 @@ public class ScoreBoard : MonoBehaviour
     {
         
         if (ballSpeed > 0)
-        {          
+        {
+            if (Time.fixedTime > animationdelay1 + blinktime)
+            {          
+            scoreboardPlayer1.NewScoreAdd(pickUpPoints, 0.1f);
             player1Icons[pickuptype].TurnOn();
             if (HasColected(player1Icons))
             {
-
+                player1Icons[0].GetComponent<AudioSource>().Play();
+                 animationdelay1 = Time.fixedTime;
+            }
             }
         }
         else
         {
-            player2Icons[pickuptype].TurnOn();
-            if (HasColected(player2Icons))
+            if (Time.fixedTime > animationdelay2 + blinktime)
             {
-
+                scoreboardPlayer2.NewScoreAdd(pickUpPoints, 0.1f);
+                player2Icons[pickuptype].TurnOn();
+                if (HasColected(player2Icons))
+                {
+                    player2Icons[0].GetComponent<AudioSource>().Play();
+                    animationdelay2 = Time.fixedTime;
+                }
             }
         }
     }
@@ -77,18 +96,27 @@ public class ScoreBoard : MonoBehaviour
     }
     public void Scored (int playerGoal, float score) // score is standin
     {
+        // musk.GetComponent<AudioSource>().Pause();
+        musk.GetComponent<AudioSource>().volume = 0.3f;
+        hasScored = true;
         PlayerScoar = playerGoal;
         if (PlayerScoar == 1)
         {
-            scoreboardPlayer1.NewScoreAdd(score);
+            scoreboardPlayer1.NewScoreAdd(score, 0.1f);
         }
         else
         {
-            scoreboardPlayer2.NewScoreAdd(score);
+            scoreboardPlayer2.NewScoreAdd(score, 0.1f);
         }
     }
     public void DoneScoring ()
     {
+        if (hasScored)
+        {
+            hasScored = false;
+
+
+        musk.GetComponent<AudioSource>().volume = 0.75f;
         if (PlayerScoar == 1)
         {            
             MonkeyArmP1.MoveArmAnimation();
@@ -98,10 +126,19 @@ public class ScoreBoard : MonoBehaviour
             MonkeyArmP2.MoveArmAnimation();
         }
         ResetTheBoard();
+        }
     }
     void ResetTheBoard()
     {
         TurnOfAll();
         pickupManager.TurnOfAll();
+    }
+    void StartBlinkingBoys(List<Collectables> icons)
+    {
+            for (int i = 0; i < icons.Count; i++)
+            {
+                icons[i].StartBlinking();
+
+            }
     }
 }

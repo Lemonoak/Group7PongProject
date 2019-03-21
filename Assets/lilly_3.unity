@@ -4849,7 +4849,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6383,7 +6383,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -23699,6 +23699,8 @@ MonoBehaviour:
   - {fileID: 6735392}
   - {fileID: 968791487}
   pickupManager: {fileID: 1989745497}
+  pickUpPoints: 250
+  musk: {fileID: 1720513320}
   PlayerScoar: 1
 --- !u!4 &1210951426
 Transform:
@@ -27831,7 +27833,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609163205}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b5015f98a9e437941bdd75388c334ed8, type: 3}
@@ -28407,7 +28409,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623830321}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b5015f98a9e437941bdd75388c334ed8, type: 3}
@@ -37745,6 +37747,11 @@ PrefabInstance:
       propertyPath: scoreBoard
       value: 
       objectReference: {fileID: 1210951425}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: musk
+      value: 
+      objectReference: {fileID: 1720513320}
     - target: {fileID: 65580625414687242, guid: 152035231bd5f92468e19de549081952,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37979,7 +37986,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 16f7b57762e649e44a7a4aa8092da50b, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
