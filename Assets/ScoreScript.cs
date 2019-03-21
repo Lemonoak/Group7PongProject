@@ -10,6 +10,8 @@ public class ScoreScript : MonoBehaviour
     float change = 0;
     bool gaining = false;
     public float ScoreSpeed = 0.1f;
+    string frontBuffer;
+    string BackBuffer;
     //TextMeshPro textComp;
     TextMeshProUGUI textPro;
     public ScoreBoard board;
@@ -20,7 +22,7 @@ public class ScoreScript : MonoBehaviour
         ScoreSpeed = 0.1f;
         tickSource = GetComponent<AudioSource>();
         textPro = GetComponent<TextMeshProUGUI>();
-        textPro.text = playerScore.ToString() + "00";
+        DrawScore();
         // textComp = GetComponent<TextMeshPro>();
     }
 
@@ -29,17 +31,17 @@ public class ScoreScript : MonoBehaviour
     {
         if (playerScore >= newScore && gaining)
         {
-            playerScore = newScore;
-            textPro.text = playerScore.ToString() + "00";            
+            playerScore = newScore;          
             tickSource.Stop();
             gaining = false;
+            DrawScore();
 
             board.DoneScoring();
         }
         else if (playerScore < newScore)
         {
             playerScore += Mathf.FloorToInt(change);
-            textPro.text = playerScore.ToString() + "00";
+            DrawScore();
         }
 
     }
@@ -51,5 +53,22 @@ public class ScoreScript : MonoBehaviour
         newScore = Mathf.FloorToInt(newScore + (score * 1));
         gaining = true;
         tickSource.Play();
+    }
+    private void DrawScore()
+    {
+        frontBuffer = "";
+        for (int i = 1000000000; i > playerScore; i = i /10)
+        {
+            frontBuffer += "0";
+        }
+        if(playerScore == 0)
+        {
+            BackBuffer = "0";
+        }
+        else
+        {
+            BackBuffer = "00";
+        }
+        textPro.text = frontBuffer + playerScore.ToString() + BackBuffer;
     }
 }

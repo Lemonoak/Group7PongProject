@@ -6,7 +6,7 @@ public class Collectables : MonoBehaviour
 {
     
     public bool isOn;
-    public bool blink = true;
+    bool blink = false;
     public float animationLenght = 1.1f;
     float curentTime = 0;
     float blinkdirection = 0.05f;
