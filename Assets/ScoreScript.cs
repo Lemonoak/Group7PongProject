@@ -5,29 +5,42 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour
 {
-    int playerScore;
-    int newScore;
+    int playerScore = 0;
+    int newScore = 0;
+    float change = 0;
+    bool gaining = false;
+    public float ScoreSpeed = 0.1f;
     //TextMeshPro textComp;
     TextMeshProUGUI textPro;
+    public ScoreBoard board;
+    public AudioSource tickSource;
     // Start is called before the first frame update
     void Start()
     {
-        textPro= GetComponent<TextMeshProUGUI>();
-       // textComp = GetComponent<TextMeshPro>();
+        tickSource = GetComponent<AudioSource>();
+        textPro = GetComponent<TextMeshProUGUI>();
+        textPro.text = playerScore.ToString() + "00";
+        // textComp = GetComponent<TextMeshPro>();
     }
 
     // Update is called once per frame
     void Update()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         textPro.text = newScore.ToString() + "00";
        // textComp.text = "Steve";
 =======
+=======
+>>>>>>> parent of 3841ac9... test
         if (playerScore >= newScore && gaining)
         {
             newScore = playerScore;
             textPro.text = playerScore.ToString() + "00";
+<<<<<<< HEAD
             Debug.Log("IN SCoreScriPT");
+=======
+>>>>>>> parent of 3841ac9... test
             board.DoneScoring();
             tickSource.Stop();
             gaining = false;
@@ -38,12 +51,18 @@ public class ScoreScript : MonoBehaviour
             playerScore += Mathf.FloorToInt(change);
             textPro.text = playerScore.ToString() + "00";
         }
+<<<<<<< HEAD
 >>>>>>> parent of 3e7b027... woho
+=======
+>>>>>>> parent of 3841ac9... test
 
     }
    
-    void NewScoreAdd(float score)
+    public void NewScoreAdd(float score)
     {
-        newScore = Mathf.FloorToInt(score);
+        change = Mathf.FloorToInt(score * ScoreSpeed);
+        newScore = Mathf.FloorToInt(score + playerScore);
+        gaining = true;
+        tickSource.Play();
     }
 }

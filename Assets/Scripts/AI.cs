@@ -95,7 +95,7 @@ public class AI : MonoBehaviour
 
     void MenuSelfReset()
     {
-        if (SceneManager.GetActiveScene().name != curentScence && curentScence == "TestScene3")
+        if (SceneManager.GetActiveScene().name != curentScence && curentScence == "lilly_3")
         {
             Destroy(gameObject);
         }

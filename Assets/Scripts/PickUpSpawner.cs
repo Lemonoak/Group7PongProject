@@ -12,6 +12,7 @@ public class PickUpSpawner : MonoBehaviour
     float tempInterwal;
     public List<OnBoardPickUp> leftPickups;
     public List<OnBoardPickUp> rightPickups;
+
     public List<GameObject> allObjects;
     // Start is called before the first frame update
     void Start()
@@ -31,38 +32,7 @@ public class PickUpSpawner : MonoBehaviour
             tempInterwal = Time.fixedTime;
         }
     }
-    void SpawnPickUp()
-    {
-        allObjects.Add(Instantiate(refobject,
-            new Vector2(
-                Random.Range(-(cameraRef.transform.position.x), (cameraRef.transform.position.x)),
-                Random.Range(-(cameraRef.transform.position.x /2), (cameraRef.transform.position.x / 2))),
-                Quaternion.identity));
-    }
-    public void Reset()
-    {
-        for(int i = 0; i < allObjects.Count; i++)
-        {
-            if (allObjects[i] != null)
-            {
-                Destroy(allObjects[i]);
-            }           
-        }
-        CleanList();
-    }
-    void CleanList()
-    {
-        if (allObjects.Count != 0)
-        {       
-            for( int i = allObjects.Count; i > -1; i--)
-            {
-                if (allObjects[i] == null)
-                {
-                    allObjects.RemoveAt(i);
-                }
-            }
-        }
-    }
+
     void TurnOnPickup()
     {
         if (Random.value > 0.5f)
@@ -74,5 +44,14 @@ public class PickUpSpawner : MonoBehaviour
             rightPickups[Random.Range(0, 3)].TurnOn();
         }
 
+    }
+    public void TurnOfAll()
+    {
+        for (int i = 0; i < leftPickups.Count; i++)
+        {
+            leftPickups[i].TurnOf();
+            rightPickups[i].TurnOf();
+        }
+        tempDelay = Time.fixedTime;
     }
 }
