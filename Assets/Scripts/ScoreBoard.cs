@@ -74,7 +74,7 @@ public class ScoreBoard : MonoBehaviour
     public void Scored (int playerGoal, float score) // score is standin
     {
         PlayerScoar = playerGoal;
-        if (playerGoal == 1)
+        if (PlayerScoar == 1)
         {
             scoreboardPlayer1.NewScoreAdd(score);
         }
@@ -92,7 +92,7 @@ public class ScoreBoard : MonoBehaviour
         }
         else
         {
-            MonkeyArmP1.MoveArmAnimation();
+            MonkeyArmP2.MoveArmAnimation();
         }
     }
 }

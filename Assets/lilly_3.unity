@@ -6191,6 +6191,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7497971381932624667, guid: 16d76c48b0294a04da6485fbdf0561bd,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d76c48b0294a04da6485fbdf0561bd, type: 3}
 --- !u!1 &797021006
@@ -31357,6 +31362,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5343183298001519154, guid: 5eec75a96ebc05941baab54397e998be,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eec75a96ebc05941baab54397e998be, type: 3}
 --- !u!1 &2039206392
@@ -31529,6 +31539,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: handanimation0000 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: board
+      value: 
+      objectReference: {fileID: 1210951425}
+    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: theSpawner
+      value: 
+      objectReference: {fileID: 1079246589}
     - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31584,16 +31604,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
-        type: 3}
-      propertyPath: board
-      value: 
-      objectReference: {fileID: 1210951425}
-    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
-        type: 3}
-      propertyPath: theSpawner
-      value: 
-      objectReference: {fileID: 1079246589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de817cc8f2251ee4d8ea278c934a36a5, type: 3}
 --- !u!1 &2052293712
@@ -37385,6 +37395,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 7497971381932624667, guid: 16d76c48b0294a04da6485fbdf0561bd,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d76c48b0294a04da6485fbdf0561bd, type: 3}
 --- !u!114 &4918590723013078817 stripped
@@ -37465,6 +37480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343183298001519154, guid: 5eec75a96ebc05941baab54397e998be,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eec75a96ebc05941baab54397e998be, type: 3}
@@ -37561,6 +37581,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: handanimation0000
       objectReference: {fileID: 0}
+    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: board
+      value: 
+      objectReference: {fileID: 1210951425}
+    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
+        type: 3}
+      propertyPath: theSpawner
+      value: 
+      objectReference: {fileID: 1079246589}
     - target: {fileID: 7551676077604397585, guid: de817cc8f2251ee4d8ea278c934a36a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37616,16 +37646,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
-        type: 3}
-      propertyPath: board
-      value: 
-      objectReference: {fileID: 1210951425}
-    - target: {fileID: 6282130163431622514, guid: de817cc8f2251ee4d8ea278c934a36a5,
-        type: 3}
-      propertyPath: theSpawner
-      value: 
-      objectReference: {fileID: 1079246589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de817cc8f2251ee4d8ea278c934a36a5, type: 3}
 --- !u!114 &7912074862596138472 stripped

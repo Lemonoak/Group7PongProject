@@ -58,7 +58,8 @@ public class BallMovement : MonoBehaviour
         CurrentX = Mathf.Round(RB.velocity.x);
         CurrentY = Mathf.Round(RB.velocity.y);
 
-        void onCollisionEnter (Collision collision){
+        void onCollisionEnter (Collision collision)
+        {
             if (collision.gameObject.tag == "Target") {
 
                 tickSource.Play();
