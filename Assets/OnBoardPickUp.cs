@@ -11,8 +11,11 @@ public class OnBoardPickUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_SpriteRenderer = GetComponent<SpriteRenderer>();
         TurnOf();
+    }
+    private void Awake()
+    {
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

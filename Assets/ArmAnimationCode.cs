@@ -12,10 +12,12 @@ public class ArmAnimationCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    }
+    private void Awake()
+    {
         aM = GetComponent<Animator>();
         aM.enabled = false;
     }
-
     // Update is called once per frame
     void Update()
     {

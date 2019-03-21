@@ -88,9 +88,8 @@ public class ScoreBoard : MonoBehaviour
     }
     public void DoneScoring ()
     {
-        //Debug.Log("What?");
         if (PlayerScoar == 1)
-        {
+        {            
             MonkeyArmP1.MoveArmAnimation();
         }
         else

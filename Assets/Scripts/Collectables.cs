@@ -12,6 +12,10 @@ public class Collectables : MonoBehaviour
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         TurnOf();
     }
+    private void Awake()
+    {
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     // Update is called once per frame
     void Update()
