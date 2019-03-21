@@ -26,7 +26,7 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("Score");
            
-}
+        }
     }
 
 }

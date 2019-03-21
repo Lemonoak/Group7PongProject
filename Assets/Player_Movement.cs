@@ -8,8 +8,11 @@ public class Player_Movement : MonoBehaviour
     public string movementkey;
     public string exitkey;
     public string PlayerString;
-    public float speed=10f;
+    public float speed = 10f;
     public GameObject TextHandler;
+    SpriteRenderer sR;
+    public Sprite hitAni;
+    Sprite defSpr;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,8 @@ public class Player_Movement : MonoBehaviour
             exitkey = "Return2";
             PlayerString = "Player2";
         }
+        sR = GetComponent<SpriteRenderer>();
+        defSpr = sR.sprite;
     }
 
     private void Awake()
@@ -58,8 +63,15 @@ public class Player_Movement : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "lilly_3")
         {
             Destroy(gameObject);
-        }   
+        }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ball")
+        {
+            sR.sprite = hitAni;
+        }
     }
 }
 
