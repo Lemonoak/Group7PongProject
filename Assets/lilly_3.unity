@@ -1510,6 +1510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3269149134596634306, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1364407322290819306, guid: acd3c9ea2408aef42b9647dadd1096ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4693,8 +4698,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 60, y: 151}
-  m_SizeDelta: {x: 275.59998, y: 50}
+  m_AnchoredPosition: {x: 77.01001, y: 160.6}
+  m_SizeDelta: {x: 275.6, y: 33.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597946709
 MonoBehaviour:
@@ -4763,7 +4768,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -6227,8 +6232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -62, y: -148}
-  m_SizeDelta: {x: 275.59998, y: 50}
+  m_AnchoredPosition: {x: -77.23999, y: -170.26}
+  m_SizeDelta: {x: 274.52, y: 38.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799295064
 MonoBehaviour:
@@ -6286,7 +6291,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 260
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -23666,10 +23671,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1210951426}
   - component: {fileID: 1210951425}
+  - component: {fileID: 1210951428}
   - component: {fileID: 1210951427}
   m_Layer: 0
   m_Name: ScoreManager
-  m_TagString: Untagged
+  m_TagString: ScoreManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23700,6 +23706,7 @@ MonoBehaviour:
   - {fileID: 968791487}
   pickupManager: {fileID: 1989745497}
   pickUpPoints: 250
+  allPickUpPoints: 20
   musk: {fileID: 1720513320}
   PlayerScoar: 1
 --- !u!4 &1210951426
@@ -23812,6 +23819,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1210951428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210951424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a5ce487b7967b42b7768a3aed766a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1Text: {fileID: 1177157964}
+  Player2Text: {fileID: 1329832958}
+  Player1: 0
+  Player2: 0
+  PlayerObj:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1212249110
 GameObject:
   m_ObjectHideFlags: 0
@@ -24718,7 +24744,7 @@ RectTransform:
   - {fileID: 799295063}
   - {fileID: 1329832957}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29054,7 +29080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709029851
 GameObject:
@@ -30029,6 +30055,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269149134596634306, guid: acd3c9ea2408aef42b9647dadd1096ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1364407322290819306, guid: acd3c9ea2408aef42b9647dadd1096ea,
         type: 3}
@@ -32375,6 +32406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101166307}
   - component: {fileID: 2101166306}
+  - component: {fileID: 2101166308}
   m_Layer: 0
   m_Name: Bg_star
   m_TagString: Untagged
@@ -32444,6 +32476,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!95 &2101166308
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101166305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbb4d9852b2ff443b874c046a88bbfbd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2105776190
 GameObject:
   m_ObjectHideFlags: 0
