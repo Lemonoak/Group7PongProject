@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1682644557568951663}
   - component: {fileID: 1682644557568951632}
   - component: {fileID: 1682644557568951633}
-  - component: {fileID: 174658866631747853}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -133,13 +132,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac634a36f7aa22745a61236353eeae1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  board: {fileID: 0}
   spawner: {fileID: 9160729182158514494, guid: 152035231bd5f92468e19de549081952, type: 3}
-  Ball: {fileID: 1682644557568951634}
+  Ball: {fileID: 0}
   CurrentBallSpeed: 0
   SpeedUpValue: 0.001
   HitPlayerSpeedUpValue: 1
   StartSpeed: 500
+<<<<<<< HEAD
   tickSource: {fileID: 0}
 --- !u!82 &174658866631747853
 AudioSource:
@@ -364,3 +363,5 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> parent of 88c25d1... unchecked warnings

@@ -45,6 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballSpawnPoint1: {fileID: 0}
   ballSpawnPoint2: {fileID: 0}
-  spawnrefObject: {fileID: 0}
-  scoreBoard: {fileID: 0}
-  AIReference: []
+  spawnObject: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
+    type: 3}

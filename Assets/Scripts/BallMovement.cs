@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BallMovement : MonoBehaviour
 {
-    public ScoreBoard board;
+
     private Rigidbody2D RB;
     public GameObject spawner;
     //for the AI to see the ball
@@ -20,8 +20,8 @@ public class BallMovement : MonoBehaviour
 
     //the speed the balls starts with on the X axis, the Y is also this value but divided by 2
     public float StartSpeed = 1.0f;
-    public AudioSource tickSource;
 
+    public ScoreBoard board;
 
     float CurrentX = 0.0f;
     float CurrentY = 0.0f;
@@ -33,9 +33,6 @@ public class BallMovement : MonoBehaviour
 
     void Start()
     {
-
-        tickSource = GetComponent<AudioSource>();
-
         RB = GetComponent<Rigidbody2D>();
         Ball = gameObject;
         //Randomzies direction to start and adds force on the ball
@@ -57,6 +54,7 @@ public class BallMovement : MonoBehaviour
 
         CurrentX = Mathf.Round(RB.velocity.x);
         CurrentY = Mathf.Round(RB.velocity.y);
+
 
         //Sets a float to make score depend on velocity
         //CurrentBallSpeed = CurrentX + CurrentY;
@@ -101,14 +99,11 @@ public class BallMovement : MonoBehaviour
             RB.AddForce(new Vector2(-StartSpeed, -StartSpeed / 2));
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-            tickSource.Play();
-    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PickUp" && collision.GetComponent<OnBoardPickUp>().isOn)
-        {            
+        if (collision.tag == "PickUp")
+        {
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
         }
         else if (collision.tag == "Player")
@@ -134,14 +129,13 @@ public class BallMovement : MonoBehaviour
             //ERROR HANDLING
             if (collision.GetComponent<Goal>() != null)
             {
-
                 if (transform.position.x < 0)
                 {
-                    board.Scored(2, Mathf.Abs(RB.velocity.x) + Mathf.Abs(RB.velocity.y));
+                    board.scored(2, 100);
                 }
                 else
                 {
-                    board.Scored(1, Mathf.Abs(RB.velocity.x) + Mathf.Abs(RB.velocity.y));
+                    board.scored(1, 100);
                 }
                 Destroy(gameObject);
             }
