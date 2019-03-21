@@ -26217,7 +26217,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
     - target: {fileID: 8043712878042597840, guid: 03fb9a11ace588942bdb0600bba00cf0,
@@ -26227,8 +26230,11 @@ PrefabInstance:
       objectReference: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
         type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 3e7b027... woho
 =======
+=======
+>>>>>>> parent of 3841ac9... test
     - target: {fileID: 8043712878042597843, guid: 03fb9a11ace588942bdb0600bba00cf0,
         type: 3}
       propertyPath: m_Color.r
@@ -26244,6 +26250,9 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of 3841ac9... test
+=======
 >>>>>>> parent of 3841ac9... test
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03fb9a11ace588942bdb0600bba00cf0, type: 3}

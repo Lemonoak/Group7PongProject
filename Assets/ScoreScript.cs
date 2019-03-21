@@ -28,9 +28,12 @@ public class ScoreScript : MonoBehaviour
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         textPro.text = newScore.ToString() + "00";
        // textComp.text = "Steve";
 =======
+=======
+>>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
         if (playerScore >= newScore && gaining)
@@ -38,7 +41,10 @@ public class ScoreScript : MonoBehaviour
             newScore = playerScore;
             textPro.text = playerScore.ToString() + "00";
 <<<<<<< HEAD
+<<<<<<< HEAD
             Debug.Log("IN SCoreScriPT");
+=======
+>>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
             board.DoneScoring();
@@ -52,7 +58,10 @@ public class ScoreScript : MonoBehaviour
             textPro.text = playerScore.ToString() + "00";
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 3e7b027... woho
+=======
+>>>>>>> parent of 3841ac9... test
 =======
 >>>>>>> parent of 3841ac9... test
 

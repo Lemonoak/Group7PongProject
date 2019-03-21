@@ -8,6 +8,11 @@ public class ArmAnimationCode : MonoBehaviour
     public ScoreBoard board;
     public BallSpawner theSpawner;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    public Animation aN;
+    float time;
+>>>>>>> parent of 3841ac9... test
 =======
     public Animation aN;
     float time;
@@ -22,7 +27,11 @@ public class ArmAnimationCode : MonoBehaviour
     {
         aM = GetComponent<Animator>();
 <<<<<<< HEAD
+<<<<<<< HEAD
         aM.enabled = false;
+=======
+        aM.Play("", 0, aM.GetCurrentAnimatorStateInfo(0).length);
+>>>>>>> parent of 3841ac9... test
 =======
         aM.Play("", 0, aM.GetCurrentAnimatorStateInfo(0).length);
 >>>>>>> parent of 3841ac9... test
@@ -30,6 +39,7 @@ public class ArmAnimationCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if(aM.enabled)
         {
@@ -39,10 +49,15 @@ public class ArmAnimationCode : MonoBehaviour
             }    
             else if (aM.GetCurrentAnimatorStateInfo(0).normalizedTime > (startTime + 0.5) && going)
 =======
+=======
+>>>>>>> parent of 3841ac9... test
         
         if (aM.enabled)
         {
              if (Time.fixedTime > (time + (aM.GetCurrentAnimatorStateInfo(0).length * 0.5)) && going)
+<<<<<<< HEAD
+>>>>>>> parent of 3841ac9... test
+=======
 >>>>>>> parent of 3841ac9... test
             {
                 theSpawner.SpawnBall();
@@ -54,16 +69,22 @@ public class ArmAnimationCode : MonoBehaviour
     public void MoveArmAnimation()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         aM.enabled = true;
         going = true;
         startTime = aM.GetCurrentAnimatorStateInfo(0).normalizedTime;
 =======
+=======
+>>>>>>> parent of 3841ac9... test
         aM.Play("", 0, 0f);
         going = true;
         Debug.Log(aM.GetCurrentAnimatorStateInfo(0).normalizedTime + " is normalizedTime");
         time = Time.fixedTime;
 
         //startTime = aM.GetCurrentAnimatorStateInfo(0).normalizedTime;
+<<<<<<< HEAD
+>>>>>>> parent of 3841ac9... test
+=======
 >>>>>>> parent of 3841ac9... test
     }
 }
