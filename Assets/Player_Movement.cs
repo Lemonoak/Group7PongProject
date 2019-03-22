@@ -60,7 +60,7 @@ public class Player_Movement : MonoBehaviour
         }
         if (Input.GetButtonDown(exitkey))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
         if (SceneManager.GetActiveScene().name != "lilly_3")
         {
