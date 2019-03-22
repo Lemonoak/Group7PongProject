@@ -9,11 +9,13 @@ public class PlayerRacket : MonoBehaviour
     public bool BallIsInside = false;
     private GameObject Ball;
     public AudioSource tickSource;
+    public ParticleSystem HitParticles;
+    public bool PlayParticles = true;
 
     void Start()
     {
         tickSource = GetComponent<AudioSource>();
-
+        
         if (transform.position.x < 0)
         {
             movementkey = "Push1";
@@ -34,6 +36,10 @@ public class PlayerRacket : MonoBehaviour
             {
                 tickSource.Play();
                 Debug.Log("Tried to push");
+                if(PlayParticles)
+                {
+                    HitParticles.Play();
+                }
                 Ball.GetComponent<BallMovement>().AddSpeed();
             }
         }
