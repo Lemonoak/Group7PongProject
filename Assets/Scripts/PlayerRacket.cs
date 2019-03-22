@@ -10,6 +10,7 @@ public class PlayerRacket : MonoBehaviour
     private GameObject Ball;
     public AudioSource tickSource;
     public ParticleSystem HitParticles;
+    public ParticleSystem HitParticlesFailed;
     public bool PlayParticles = true;
 
     void Start()
@@ -41,6 +42,19 @@ public class PlayerRacket : MonoBehaviour
                     HitParticles.Play();
                 }
                 Ball.GetComponent<BallMovement>().AddSpeed();
+            }
+        }
+        else if(!BallIsInside)
+        {
+            if (Input.GetButtonDown(movementkey))
+            {
+                if (PlayParticles)
+                {
+                    if(HitParticlesFailed.isStopped)
+                    {
+                        HitParticlesFailed.Play();
+                    }
+                }
             }
         }
 
