@@ -13,6 +13,8 @@ public class Player_Movement : MonoBehaviour
     SpriteRenderer sR;
     public Sprite hitAni;
     Sprite defSpr;
+    float animationDelay = 0.2f;
+    float lastTime;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +66,11 @@ public class Player_Movement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if(Time.fixedTime > lastTime + animationDelay && sR.sprite != defSpr)
+        {
+            sR.sprite = defSpr;
+        }
+
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,6 +78,7 @@ public class Player_Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             sR.sprite = hitAni;
+            lastTime = Time.fixedTime;
         }
     }
 }
