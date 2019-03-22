@@ -138,7 +138,7 @@ public class ScoreBoard : MonoBehaviour
     }
     void ResetTheBoard()
     {
-        TurnOfAll();
+        //TurnOfAll();
         pickupManager.TurnOfAll();
     }
     void StartBlinkingBoys(List<Collectables> icons)

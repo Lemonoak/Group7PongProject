@@ -85,6 +85,15 @@ public class BallMovement : MonoBehaviour
             //Debug.Log("  X   " + CurrentX);
         }
 
+        if(Ball.transform.position.x < - 5000)
+        {
+            Destroy(gameObject);
+        }
+        else if (Ball.transform.position.x > 5000)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     //Sets the start direction and adds force to the ball in that direction

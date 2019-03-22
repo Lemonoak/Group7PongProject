@@ -10,6 +10,8 @@ public class OnBoardPickUp : MonoBehaviour
     public int pickuptype;
     SpriteRenderer m_SpriteRenderer;
     public ScoreBoard myMama;
+    public GameObject ScoreText;
+    public float TextTimer = 2.0f;
     // Start is called before the first frame update
     void Start()
     {/*
@@ -21,6 +23,7 @@ public class OnBoardPickUp : MonoBehaviour
     }
     private void Awake()
     {
+        TextTimer = 0;
         tickSource = GetComponent<AudioSource>();
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         TurnOf();
@@ -28,7 +31,11 @@ public class OnBoardPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TextTimer -= Time.deltaTime;
+        if(TextTimer < 0)
+        {
+            TurnOffText();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,6 +45,7 @@ public class OnBoardPickUp : MonoBehaviour
             tickSource.Play();
             myMama.BabyGotHit(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x, pickuptype);
             TurnOf();
+            TurnOnText();
         }       
     }
     public void TurnOn()
@@ -49,5 +57,20 @@ public class OnBoardPickUp : MonoBehaviour
     {
         m_SpriteRenderer.color = Color.grey;
         isOn = false;
+    }
+    public void TurnOnText()
+    {
+        if(ScoreText)
+        {
+            ScoreText.SetActive(true);
+            TextTimer = 0.7f;
+        }
+    }
+    public void TurnOffText()
+    {
+        if (ScoreText)
+        {
+            ScoreText.SetActive(false);
+        }
     }
 }
