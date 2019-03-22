@@ -105,7 +105,7 @@ public class AI : MonoBehaviour
         {
             if (Input.GetButtonDown(specialKey))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 Instantiate(Player, new Vector2(transform.position.x, 0), transform.rotation);
                 Destroy(gameObject);
             }

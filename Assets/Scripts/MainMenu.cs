@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
         if(Input.GetButtonDown("Start1"))
         {
             Debug.Log("One player start Game");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         if (Input.GetButtonDown("Start2"))
         {
             Debug.Log("TWO player start Game");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 }
