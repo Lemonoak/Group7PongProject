@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerJoinTextHandler : MonoBehaviour
@@ -22,6 +23,18 @@ public class PlayerJoinTextHandler : MonoBehaviour
     private void Update()
     {
         //PLAYER 1 TEXT
+
+        if(SceneManager.GetActiveScene().name == "Lilly_Menu")
+        {
+            if(Player1 == true)
+            {
+                Player1 = false;
+            }
+            if (Player2 == true)
+            {
+                Player2 = false;
+            }
+        }
         if(Player1)
         {
             if (Player1Text)
