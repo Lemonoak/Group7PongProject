@@ -32303,8 +32303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a5ce487b7967b42b7768a3aed766a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1Text: {fileID: 2056503828}
-  Player2Text: {fileID: 685329463}
+  Player1Text: {fileID: 2056503825}
+  Player2Text: {fileID: 685329460}
   Player1: 0
   Player2: 0
   PlayerObj:

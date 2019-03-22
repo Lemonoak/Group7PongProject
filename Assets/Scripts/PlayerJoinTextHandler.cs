@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class PlayerJoinTextHandler : MonoBehaviour
 {
 
-    public TextMeshProUGUI Player1Text;
-    public TextMeshProUGUI Player2Text;
+    public GameObject Player1Text;
+    public GameObject Player2Text;
 
     public bool Player1 = false;
     public bool Player2 = false;
@@ -22,8 +21,6 @@ public class PlayerJoinTextHandler : MonoBehaviour
 
     private void Update()
     {
-        //PLAYER 1 TEXT
-
         if(SceneManager.GetActiveScene().name == "Lilly_Menu")
         {
             if(Player1 == true)
@@ -35,6 +32,7 @@ public class PlayerJoinTextHandler : MonoBehaviour
                 Player2 = false;
             }
         }
+        //PLAYER 1 TEXT
         if(Player1)
         {
             if (Player1Text)
@@ -44,7 +42,7 @@ public class PlayerJoinTextHandler : MonoBehaviour
         }
         else
         {
-            if (!Player1Text.IsActive())
+            if (!Player1Text.activeInHierarchy)
             {
                 Player1Text.gameObject.SetActive(true);
             }
@@ -59,7 +57,7 @@ public class PlayerJoinTextHandler : MonoBehaviour
         }
         else
         {
-            if (!Player2Text.IsActive())
+            if (!Player2Text.activeInHierarchy)
             {
                 Player2Text.gameObject.SetActive(true);
             }
