@@ -47,7 +47,7 @@ public class PickUpSpawner : MonoBehaviour
     }
     public void TurnOfAll()
     {
-        for (int i = 0; i < leftPickups.Count - 1; i++)
+        for (int i = 0; i < leftPickups.Count; i++)
         {
             leftPickups[i].TurnOf();
             rightPickups[i].TurnOf();

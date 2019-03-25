@@ -25,6 +25,10 @@ public class ScoreBoard : MonoBehaviour
     float animationdelay1;
     float animationdelay2;
     public int PlayerScoar = 1;
+    int round = 0;
+
+    public List<Round> roundCounters;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +84,7 @@ public class ScoreBoard : MonoBehaviour
     }
     public void TurnOfAll()
     {
-        for (int i = 0; i < player1Icons.Count -1; i++)
+        for (int i = 0; i < player1Icons.Count; i++)
         {
             player1Icons[i].TurnOf();
             player2Icons[i].TurnOf();
@@ -99,7 +103,7 @@ public class ScoreBoard : MonoBehaviour
     }
     void TurnOfScoreSide(List<Collectables> icons)
     {
-        for (int i = 0; i < icons.Count - 1; i++)
+        for (int i = 0; i < icons.Count; i++)
         {
             icons[i].TurnOf();
         }
@@ -123,6 +127,7 @@ public class ScoreBoard : MonoBehaviour
     {
         if (hasScored)
         {
+            round++;
             hasScored = false;
             musk.GetComponent<AudioSource>().volume = 0.75f;
             if (PlayerScoar == 1)
@@ -134,11 +139,17 @@ public class ScoreBoard : MonoBehaviour
                 MonkeyArmP2.MoveArmAnimation();
             }
             ResetTheBoard();
+            
         }
     }
     void ResetTheBoard()
     {
         //TurnOfAll();
+        for (int i = 0; i < roundCounters.Count; i++)
+        {
+            roundCounters[i].setRoundNum(round);
+        }
+        
         pickupManager.TurnOfAll();
     }
     void StartBlinkingBoys(List<Collectables> icons)
