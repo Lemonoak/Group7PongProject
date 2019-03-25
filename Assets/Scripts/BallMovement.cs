@@ -30,6 +30,7 @@ public class BallMovement : MonoBehaviour
 
     float OldVeloctyX;
     float OldVeloctyY;
+    float maxYvelocity;
 
     void Start()
     {
@@ -93,9 +94,25 @@ public class BallMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //Debug.Log(RB.velocity.y);
+        //RB.velocity = Maxvelocity(); de y speed relative to x need to be fixt
 
     }
 
+    Vector2 Maxvelocity()
+    {
+        Vector2 velocityClamp = RB.velocity;
+        float remainder;
+        remainder = Mathf.Clamp(RB.velocity.y - maxYvelocity, 0, maxYvelocity);
+        remainder = Mathf.Abs(remainder);
+        if (RB.velocity.x < 0)
+        {
+            remainder *= -1;
+        }
+        velocityClamp = new Vector2(RB.velocity.x + remainder, RB.velocity.y - remainder);
+
+        return velocityClamp;
+    }
     //Sets the start direction and adds force to the ball in that direction
     void RandomizeStartDirection()
     {
