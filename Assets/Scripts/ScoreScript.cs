@@ -7,9 +7,10 @@ public class ScoreScript : MonoBehaviour
 {
     int playerScore = 0;
     int newScore = 0;
-    float change = 0;
+    float change = 10;
     bool gaining = false;
-    public float ScoreSpeed = 0.1f;
+    float ScoreSpeed = 10f;
+    float lastTime= 0;
     string frontBuffer;
     string BackBuffer;
     //TextMeshPro textComp;
@@ -19,7 +20,7 @@ public class ScoreScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreSpeed = 0.1f;
+        ScoreSpeed = 0.2f;
         tickSource = GetComponent<AudioSource>();
         textPro = GetComponent<TextMeshProUGUI>();
         DrawScore();
@@ -38,19 +39,22 @@ public class ScoreScript : MonoBehaviour
 
             board.DoneScoring();
         }
-        else if (playerScore < newScore)
-        {
-            playerScore += Mathf.FloorToInt(change);
-            DrawScore();
+        else if (playerScore < newScore && lastTime > ScoreSpeed)
+        {           
+            if (lastTime > ScoreSpeed)
+            {
+                lastTime = 0; ;
+                playerScore += Mathf.FloorToInt(change);
+                DrawScore();
+            }               
         }
+        lastTime = Mathf.Clamp(lastTime + Time.deltaTime, 0, ScoreSpeed * 2);
 
     }
    
-    public void NewScoreAdd(float score, float Speed)
+    public void NewScoreAdd(float score)
     {
-        ScoreSpeed = Speed;
-        change = Mathf.FloorToInt(score * ScoreSpeed * 1);
-        newScore = Mathf.FloorToInt(newScore + (score * 1));
+        newScore = Mathf.FloorToInt(newScore + score);
         gaining = true;
         tickSource.Play();
     }

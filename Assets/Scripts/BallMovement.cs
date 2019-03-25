@@ -162,7 +162,7 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.tag == "AI")
         {
-            Debug.Log("Entered AI");
+           // Debug.Log("Entered AI");
             //ERROR HANDLING
             if (PlayerSmashed)
             {
