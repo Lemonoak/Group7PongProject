@@ -30,6 +30,8 @@ public class BallMovement : MonoBehaviour
 
     float OldVeloctyX;
     float OldVeloctyY;
+    float maxYvelocityPart = 3;
+    float funXSpeed = 8;
 
     void Start()
     {
@@ -85,8 +87,46 @@ public class BallMovement : MonoBehaviour
             //Debug.Log("  X   " + CurrentX);
         }
 
+        if(Ball.transform.position.x < - 5000)
+        {
+            Destroy(gameObject);
+        }
+        else if (Ball.transform.position.x > 5000)
+        {
+            Destroy(gameObject);
+        }
+        
+        if(RB.velocity.x != 0)
+        {
+            RB.velocity = Maxvelocity(); // the y speed relative to x need to be fixt
+        }
+        
+
     }
 
+    Vector2 Maxvelocity()
+    {
+        Vector2 velocityClamp = new Vector2( Mathf.Abs(RB.velocity.x), Mathf.Abs(RB.velocity.y));
+        float remainder;
+        if (velocityClamp.x < funXSpeed)
+        {       
+            for (; velocityClamp.y/ velocityClamp.x > maxYvelocityPart ;)
+            {
+                remainder = velocityClamp.y * 0.05f;
+                velocityClamp.y -= remainder;
+                velocityClamp.x += remainder;
+            }
+        }
+            if (RB.velocity.x < 0)
+            {
+                velocityClamp.x *= -1;
+            }
+            if (RB.velocity.y < 0)
+            {
+                velocityClamp.y *= -1;
+            }
+        return velocityClamp;
+    }
     //Sets the start direction and adds force to the ball in that direction
     void RandomizeStartDirection()
     {
@@ -122,7 +162,7 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.tag == "AI")
         {
-            Debug.Log("Entered AI");
+           // Debug.Log("Entered AI");
             //ERROR HANDLING
             if (PlayerSmashed)
             {

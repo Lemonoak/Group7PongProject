@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScene3.unity
     guid: db228234efb55a14ebcc3cc80175f80b
   - enabled: 1
+    path: Assets/Lilly_Menu.unity
+    guid: 39a358b98eab9364e8da52a5505d89ce
+  - enabled: 1
     path: Assets/lilly_3.unity
     guid: 806ba3b4bd72449c3bce0d8bdf1a29ce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenuScene.unity
     guid: a91800e428bacd044b2447f7e7b8d43f
   m_configObjects: {}

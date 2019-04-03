@@ -16,8 +16,8 @@ public class ScoreBoard : MonoBehaviour
 
     public PickUpSpawner pickupManager;
 
-    public float pickUpPoints = 5;
-    public float allPickUpPoints = 20;
+    float pickUpPoints = 2;
+    float allPickUpPoints = 10;
     public GameObject musk;
 
     bool hasScored = true;
@@ -25,12 +25,18 @@ public class ScoreBoard : MonoBehaviour
     float animationdelay1;
     float animationdelay2;
     public int PlayerScoar = 1;
+    int roundWinP1 = 0;
+    int roundWinP2 = 0;
+
+    public List<Round> player1RoundWins;
+    public List<Round> player2RoundWins;
+
+
     // Start is called before the first frame update
     void Start()
     {
         DoneScoring();
         blinktime = player1Icons[0].animationLenght;
-
     }
 
     // Update is called once per frame
@@ -45,17 +51,17 @@ public class ScoreBoard : MonoBehaviour
         {
             if (Time.fixedTime > animationdelay1 + blinktime)
             {
+                player1Icons[pickuptype].TurnOn();
                 if (HasColected(player1Icons))
                 {
-                     scoreboardPlayer1.NewScoreAdd(allPickUpPoints, 0.1f);
+                     scoreboardPlayer1.NewScoreAdd(allPickUpPoints);
                      player1Icons[0].GetComponent<AudioSource>().Play();
                      StartBlinkingBoys(player1Icons);
                      animationdelay1 = Time.fixedTime;
                 }
                 else
                 {
-                    scoreboardPlayer1.NewScoreAdd(pickUpPoints, 0.1f);
-                    player1Icons[pickuptype].TurnOn();
+                    scoreboardPlayer1.NewScoreAdd(pickUpPoints);
                 }
             }
         }
@@ -65,14 +71,14 @@ public class ScoreBoard : MonoBehaviour
             {
                 if (HasColected(player2Icons))
                 {
-                    scoreboardPlayer2.NewScoreAdd(allPickUpPoints, 0.1f);
+                    scoreboardPlayer2.NewScoreAdd(allPickUpPoints);
                     player2Icons[0].GetComponent<AudioSource>().Play();
                     StartBlinkingBoys(player2Icons);
                     animationdelay2 = Time.fixedTime;
                 }
                 else
                 {
-                    scoreboardPlayer2.NewScoreAdd(pickUpPoints, 0.1f);
+                    scoreboardPlayer2.NewScoreAdd(pickUpPoints);
                     player2Icons[pickuptype].TurnOn();
                 }
             }
@@ -80,7 +86,7 @@ public class ScoreBoard : MonoBehaviour
     }
     public void TurnOfAll()
     {
-        for (int i = 0; i < player1Icons.Count -1; i++)
+        for (int i = 0; i <= player1Icons.Count -1; i++)
         {
             player1Icons[i].TurnOf();
             player2Icons[i].TurnOf();
@@ -99,7 +105,7 @@ public class ScoreBoard : MonoBehaviour
     }
     void TurnOfScoreSide(List<Collectables> icons)
     {
-        for (int i = 0; i < icons.Count - 1; i++)
+        for (int i = 0; i <= icons.Count - 1; i++)
         {
             icons[i].TurnOf();
         }
@@ -112,11 +118,15 @@ public class ScoreBoard : MonoBehaviour
         PlayerScoar = playerGoal;
         if (PlayerScoar == 1)
         {
-            scoreboardPlayer1.NewScoreAdd(score, 0.1f);
+            roundWinP1++;
+            roundwins(player1RoundWins, roundWinP1);
+            scoreboardPlayer1.NewScoreAdd(score);
         }
         else
         {
-            scoreboardPlayer2.NewScoreAdd(score, 0.1f);
+            roundWinP2++;
+            roundwins(player2RoundWins, roundWinP2);
+            scoreboardPlayer2.NewScoreAdd(score);
         }
     }
     public void DoneScoring ()
@@ -134,16 +144,25 @@ public class ScoreBoard : MonoBehaviour
                 MonkeyArmP2.MoveArmAnimation();
             }
             ResetTheBoard();
+            
         }
     }
     void ResetTheBoard()
     {
-        TurnOfAll();
         pickupManager.TurnOfAll();
+        TurnOfAll();
+
+    }
+    void roundwins (List<Round> givepoint, int score)
+    {
+        for (int i = 0; i <= givepoint.Count - 1; i++)
+        {
+            givepoint[i].setRoundNum(score);
+        }
     }
     void StartBlinkingBoys(List<Collectables> icons)
     {
-        for (int i = 0; i < icons.Count - 1; i++)
+        for (int i = 0; i <= icons.Count - 1; i++)
         {
             icons[i].StartBlinking();
         }

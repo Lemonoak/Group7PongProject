@@ -14,7 +14,6 @@ public class Collectables : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_SpriteRenderer = GetComponent<SpriteRenderer>();
         TurnOf();
     }
     private void Awake()
@@ -29,7 +28,7 @@ public class Collectables : MonoBehaviour
     {
         if (blink)
         {
-            Debug.Log(m_SpriteRenderer.color.a);
+            //Debug.Log(m_SpriteRenderer.color.a);
             if (m_SpriteRenderer.color.a >= 1f || m_SpriteRenderer.color.a <= 0.5f)
             {
                 blinkdirection *= -1;
@@ -44,7 +43,6 @@ public class Collectables : MonoBehaviour
     }
     public void TurnOn()
     {
-        Debug.Log("GotHere");
         m_SpriteRenderer.color = Color.white;
         isOn = true;
     }
@@ -52,6 +50,7 @@ public class Collectables : MonoBehaviour
     {
         m_SpriteRenderer.color = Color.grey;
         isOn = false;
+        blink = false;
 
     }
     public void StopBlinking()

@@ -24,7 +24,7 @@ public class GameRestart : MonoBehaviour
         }
         else if(Time.fixedTime > idleTime + restartTime)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }

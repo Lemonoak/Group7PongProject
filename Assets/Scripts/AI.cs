@@ -13,6 +13,11 @@ public class AI : MonoBehaviour
     Scene m_Scene;
     bool hasNewPlayer;
     string curentScence = "";
+    SpriteRenderer sR;
+    public Sprite hitAni;
+    Sprite defSpr;
+    float animationDelay = 0.2f;
+    float lastTime;
 
     private void Start()
     {
@@ -26,14 +31,27 @@ public class AI : MonoBehaviour
             specialKey = "Start2";
             movementkey = "Movement2";
         }
+        sR = GetComponent<SpriteRenderer>();
+        defSpr = sR.sprite;
     }
     void Update()
     {
         HandleMovement();
         SpawnPlayer();
         MenuSelfReset();
+        if (Time.fixedTime > lastTime + animationDelay && sR.sprite != defSpr)
+        {
+            sR.sprite = defSpr;
+        }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ball")
+        {
+            sR.sprite = hitAni;
+            lastTime = Time.fixedTime;
+        }
+    }
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -87,7 +105,7 @@ public class AI : MonoBehaviour
         {
             if (Input.GetButtonDown(specialKey))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 Instantiate(Player, new Vector2(transform.position.x, 0), transform.rotation);
                 Destroy(gameObject);
             }
