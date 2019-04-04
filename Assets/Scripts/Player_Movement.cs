@@ -12,6 +12,9 @@ public class Player_Movement : MonoBehaviour
     public GameObject TextHandler;
     SpriteRenderer sR;
     public Sprite hitAni;
+
+    public Sprite missAni;
+    public Sprite bosstAni;
     Sprite defSpr;
     float animationDelay = 0.2f;
     float lastTime;
@@ -75,12 +78,26 @@ public class Player_Movement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.tag == "Ball" && sR.sprite == defSpr)
         {
             sR.sprite = hitAni;
             lastTime = Time.fixedTime;
         }
     }
+
+    public void swungRaket(bool didHit)
+    {
+        if (didHit)
+        {
+            sR.sprite = bosstAni;
+        }
+        else
+        {
+            sR.sprite = missAni;
+        }
+        lastTime = Time.fixedTime;
+    }
+
 }
 
         

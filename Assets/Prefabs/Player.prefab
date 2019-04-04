@@ -106,6 +106,8 @@ MonoBehaviour:
   speed: 10
   TextHandler: {fileID: 0}
   hitAni: {fileID: 21300000, guid: 7fe5cbfe9bdeb425e83f87ef1662c06a, type: 3}
+  missAni: {fileID: 21300000, guid: fa5dfbbd74f9d4c8998fc6c36405def8, type: 3}
+  bosstAni: {fileID: 21300000, guid: 184d0a94f540a484fa81eb58daed4424, type: 3}
 --- !u!61 &4534732654086801052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9721,6 +9723,7 @@ MonoBehaviour:
   HitParticles: {fileID: 3071209433885157288}
   HitParticlesFailed: {fileID: 1762801559136208087}
   PlayParticles: 1
+  myMama: {fileID: 3503846511555440644}
 --- !u!58 &8737648278970628367
 CircleCollider2D:
   m_ObjectHideFlags: 0

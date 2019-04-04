@@ -12,6 +12,7 @@ public class PlayerRacket : MonoBehaviour
     public ParticleSystem HitParticles;
     public ParticleSystem HitParticlesFailed;
     public bool PlayParticles = true;
+    public Player_Movement myMama;
 
     void Start()
     {
@@ -33,14 +34,15 @@ public class PlayerRacket : MonoBehaviour
         if(BallIsInside)
         {
             if(Input.GetButtonDown(movementkey))
-
             {
+
                 tickSource.Play();
-                Debug.Log("Tried to push");
+                Debug.Log("Tried to push");/*
                 if(PlayParticles)
                 {
                     HitParticles.Play();
-                }
+                } */
+                myMama.swungRaket(true);
                 Ball.GetComponent<BallMovement>().AddSpeed();
             }
         }
@@ -48,6 +50,8 @@ public class PlayerRacket : MonoBehaviour
         {
             if (Input.GetButtonDown(movementkey))
             {
+                myMama.swungRaket(false);
+                
                 if (PlayParticles)
                 {
                     if(HitParticlesFailed.isStopped)
@@ -55,6 +59,7 @@ public class PlayerRacket : MonoBehaviour
                         HitParticlesFailed.Play();
                     }
                 }
+               
             }
         }
 
