@@ -11,7 +11,6 @@ public class GameRestart : MonoBehaviour
     void Start()
     {
         restartTime = Time.fixedTime;
-        idleTime = 100000;
     }
 
     // Update is called once per frame
@@ -20,7 +19,7 @@ public class GameRestart : MonoBehaviour
         if (Input.GetAxis("Movement1") != 0 || Input.GetAxis("Movement2") != 0)
         {
             restartTime = Time.fixedTime;
-            Debug.Log("Did a Input");
+            Debug.Log(restartTime);
         }
         else if(Time.fixedTime > idleTime + restartTime)
         {
