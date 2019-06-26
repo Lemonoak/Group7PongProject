@@ -30,8 +30,10 @@ public class BallMovement : MonoBehaviour
 
     float OldVeloctyX;
     float OldVeloctyY;
-    float maxYvelocityPart = 3;
+    float maxXvelocityPart = 3;
+    float maxYvelocityPart = 1;
     float funXSpeed = 8;
+    float funYSpeed = 0.8f;
 
     void Start()
     {
@@ -110,14 +112,23 @@ public class BallMovement : MonoBehaviour
         float remainder;
         if (velocityClamp.x < funXSpeed)
         {       
-            for (; velocityClamp.y/ velocityClamp.x > maxYvelocityPart ;)
+            for (; velocityClamp.y/ velocityClamp.x > maxXvelocityPart;)
             {
                 remainder = velocityClamp.y * 0.05f;
                 velocityClamp.y -= remainder;
                 velocityClamp.x += remainder;
             }
         }
-            if (RB.velocity.x < 0)
+        if (velocityClamp.y < funYSpeed)
+        {
+            for (; velocityClamp.x / velocityClamp.y > maxYvelocityPart;)
+            {
+                remainder = velocityClamp.x * 0.05f;
+                velocityClamp.y += remainder;
+                velocityClamp.x -= remainder;
+            }
+        }
+        if (RB.velocity.x < 0)
             {
                 velocityClamp.x *= -1;
             }

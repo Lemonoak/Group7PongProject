@@ -24,7 +24,7 @@ public class Goal : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
            // tickSource.Play();
         {
-            Debug.Log("Score");
+            //Debug.Log("Score");
            
         }
     }

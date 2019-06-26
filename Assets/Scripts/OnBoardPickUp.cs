@@ -59,13 +59,20 @@ public class OnBoardPickUp : MonoBehaviour
     }
     public void TurnOnText(float diraction)
     {
-        if(diraction < 0)
+        if (GameObject.FindWithTag("GameMode").GetComponent<GameModeController>().screenLayingDown)
         {
-            ScoreText.transform.eulerAngles = new Vector3(0,0, 90);
+            if(diraction < 0)
+            {
+                ScoreText.transform.eulerAngles = new Vector3(0,0, 90);
+            }
+            else
+            {
+                ScoreText.transform.eulerAngles = new Vector3(0,0, -90);
+            }
         }
         else
         {
-            ScoreText.transform.eulerAngles = new Vector3(0,0, -90);
+            ScoreText.transform.eulerAngles = new Vector3(0, 0, 0);
         }
         if(ScoreText)
         {

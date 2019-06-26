@@ -24,13 +24,27 @@ public class Player_Movement : MonoBehaviour
     {
         if (transform.position.x < 0)
         {
-            movementkey = "Movement1";
+            if (GameObject.FindWithTag("GameMode").GetComponent<GameModeController>().screenLayingDown)
+            {
+                movementkey = "Movement1";
+            }
+            else
+            {
+                movementkey = "GMovement1";
+            }
             exitkey = "Return1";
             PlayerString = "Player1";
         }
         else
         {
-            movementkey = "Movement2";
+            if (GameObject.FindWithTag("GameMode").GetComponent<GameModeController>().screenLayingDown)
+            {
+                movementkey = "Movement2";
+            }
+            else
+            {
+                movementkey = "GMovement2";
+            }
             exitkey = "Return2";
             PlayerString = "Player2";
         }
@@ -49,11 +63,11 @@ public class Player_Movement : MonoBehaviour
 
         //this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 10f * Input.GetAxis(movementkey));
 
-        if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 3f)
+        if (Input.GetAxis(movementkey) == 1 && this.transform.position.y < 2.1f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, speed);
         }
-        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -3f)
+        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -2.2f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -speed);
         }
@@ -61,6 +75,7 @@ public class Player_Movement : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
         }
+        Debug.Log(Input.GetAxis(movementkey));
         if (Input.GetButtonDown(exitkey))
         {
             SceneManager.LoadScene(0);

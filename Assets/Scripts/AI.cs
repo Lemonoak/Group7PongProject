@@ -76,6 +76,7 @@ public class AI : MonoBehaviour
                     transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
                 }
             }
+            transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -2.2f, 2.1f), transform.position.z);
         }
         //For the ai on the left monitor
         else if(transform.position.x < 0)
@@ -94,6 +95,7 @@ public class AI : MonoBehaviour
                     transform.Translate(new Vector3(-Time.deltaTime * AISpeed, 0.0f, 0.0f));
                 }
             }
+            transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -2.2f, 2.2f), transform.position.z);
         }
     }
 
