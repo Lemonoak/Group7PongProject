@@ -16,6 +16,10 @@ public class AI : MonoBehaviour
     SpriteRenderer sR;
     public Sprite hitAni;
     Sprite defSpr;
+
+    public Sprite missAni;
+    public Sprite bosstAni;
+
     float animationDelay = 0.2f;
     float lastTime;
 
@@ -130,5 +134,17 @@ public class AI : MonoBehaviour
     public void GetBall()
     {
         Ball = GameObject.FindGameObjectWithTag("Ball");
+    }
+    public void swungRaket(bool didHit)
+    {
+        if (didHit)
+        {
+            sR.sprite = bosstAni;
+        }
+        else
+        {
+            sR.sprite = missAni;
+        }
+        lastTime = Time.fixedTime;
     }
 }
