@@ -16,7 +16,8 @@ public class BallIndicator : MonoBehaviour
 
         //ERROR HANDLING
         if(Ball)
-        {           
+        {
+            ballrE.gameObject.transform.localScale = baseScale * Mathf.Abs(Ball.transform.position.x);
             if (Ball.transform.position.x > 0)
             {
                 gameObject.transform.position = new Vector2( -1.5f, Ball.transform.position.y);
