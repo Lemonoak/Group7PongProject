@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using XInputDotNetPure;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Player_Movement : MonoBehaviour
     public Sprite bosstAni;
 
     Sprite defSpr;
-    float animationDelay = 0.2f;
+    float animationDelay = 0.3f;
     float lastTime;
 
     // Start is called before the first frame update
@@ -50,6 +51,7 @@ public class Player_Movement : MonoBehaviour
             exitkey = "Return2";
             PlayerString = "Player2";
         }
+
         sR = GetComponent<SpriteRenderer>();
         defSpr = sR.sprite;
     }
@@ -89,8 +91,8 @@ public class Player_Movement : MonoBehaviour
         if(Time.fixedTime > lastTime + animationDelay && sR.sprite != defSpr)
         {
             sR.sprite = defSpr;
+            GamePad.SetVibration(0, 0, 0);
         }
-
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -104,15 +106,34 @@ public class Player_Movement : MonoBehaviour
 
     public void swungRaket(bool didHit)
     {
-        if (didHit)
+        if (transform.position.x < 0)
         {
-            sR.sprite = bosstAni;
+            if (didHit)
+            {
+                sR.sprite = bosstAni;
+                GamePad.SetVibration(PlayerIndex.One, 1, 1);
+            }
+            else
+            {
+                sR.sprite = missAni;
+                GamePad.SetVibration(PlayerIndex.One, 0.3f, 0.3f);
+            }
+            lastTime = Time.fixedTime;
         }
         else
         {
-            sR.sprite = missAni;
+            if (didHit)
+            {
+                sR.sprite = bosstAni;
+                GamePad.SetVibration(PlayerIndex.Two, 1, 1);
+            }
+            else
+            {
+                sR.sprite = missAni;
+                GamePad.SetVibration(PlayerIndex.Two, 0.3f, 0.3f);
+            }
+            lastTime = Time.fixedTime;
         }
-        lastTime = Time.fixedTime;
     }
 
 }
