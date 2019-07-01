@@ -20,7 +20,7 @@ public class AI : MonoBehaviour
     public Sprite missAni;
     public Sprite bosstAni;
 
-    float animationDelay = 0.2f;
+    float animationDelay = 0.3f;
     float lastTime;
 
     private void Start()
