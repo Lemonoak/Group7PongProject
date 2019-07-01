@@ -30,10 +30,10 @@ public class BallMovement : MonoBehaviour
 
     float OldVeloctyX;
     float OldVeloctyY;
-    float maxXvelocityPart = 3;
-    float maxYvelocityPart = 1;
+    Vector2 oldVelocty;
+    float maxVelocityPart = 1;
     float funXSpeed = 8;
-    float funYSpeed = 0.8f;
+    float funYSpeed = 0.2f;
 
     void Start()
     {
@@ -112,7 +112,7 @@ public class BallMovement : MonoBehaviour
         float remainder;
         if (velocityClamp.x < funXSpeed)
         {       
-            for (; velocityClamp.y/ velocityClamp.x > maxXvelocityPart;)
+            for (; velocityClamp.y/ velocityClamp.x > maxVelocityPart;)
             {
                 remainder = velocityClamp.y * 0.05f;
                 velocityClamp.y -= remainder;
@@ -121,21 +121,31 @@ public class BallMovement : MonoBehaviour
         }
         if (velocityClamp.y < funYSpeed)
         {
-            for (; velocityClamp.x / velocityClamp.y > maxYvelocityPart;)
+            velocityClamp.x -= (funYSpeed - velocityClamp.y);
+            velocityClamp.y = funYSpeed;
+            /*
+            for (; velocityClamp.x / velocityClamp.y > maxVelocityPart;)
             {
                 remainder = velocityClamp.x * 0.05f;
                 velocityClamp.y += remainder;
                 velocityClamp.x -= remainder;
             }
+            */
+        }
+        if (velocityClamp.x + velocityClamp.y < Mathf.Abs(oldVelocty.x) + Mathf.Abs(oldVelocty.y))
+        {
+            Debug.Log("GotSlower");
+            velocityClamp.x = Mathf.Abs(oldVelocty.x);
+            velocityClamp.y = Mathf.Abs(oldVelocty.y);
         }
         if (RB.velocity.x < 0)
-            {
-                velocityClamp.x *= -1;
-            }
-            if (RB.velocity.y < 0)
-            {
-                velocityClamp.y *= -1;
-            }
+        {
+            velocityClamp.x *= -1;
+        }
+        if (RB.velocity.y < 0)
+        {
+            velocityClamp.y *= -1;
+        }        
         return velocityClamp;
     }
     //Sets the start direction and adds force to the ball in that direction
@@ -173,7 +183,7 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.tag == "AI")
         {
-           // Debug.Log("Entered AI");
+            Debug.Log("Entered AI");
             //ERROR HANDLING
             if (PlayerSmashed)
             {
@@ -215,5 +225,6 @@ public class BallMovement : MonoBehaviour
     {
         PlayerSmashed = false;
         RB.velocity = new Vector2(OldVeloctyX, OldVeloctyY);
+        oldVelocty = RB.velocity;
     }
 }

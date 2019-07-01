@@ -7687,7 +7687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20490003, y: 0.09890004}
+  m_AnchoredPosition: {x: -0.20490003, y: 0}
   m_SizeDelta: {x: 1.2273, y: 1.1674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218512479
@@ -9174,7 +9174,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 7.8125
+  m_padding: 0
   m_canvasRenderer: {fileID: 347283098}
   m_TextComponent: {fileID: 1506599042}
   m_materialReferenceIndex: 1
@@ -28049,7 +28049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20490003, y: 0.09890004}
+  m_AnchoredPosition: {x: -0.20490003, y: 0}
   m_SizeDelta: {x: 1.2273, y: 1.1674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140909883
@@ -29862,10 +29862,10 @@ MonoBehaviour:
   musk: {fileID: 862311037}
   PlayerScoar: 1
   player1RoundWins:
-  - {fileID: 218512479}
+  - {fileID: 1140909883}
   - {fileID: 575155974}
   player2RoundWins:
-  - {fileID: 1140909883}
+  - {fileID: 218512479}
   - {fileID: 1785115130}
 --- !u!82 &1341851739
 AudioSource:
@@ -35073,7 +35073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.466, y: 0.06}
+  m_AnchoredPosition: {x: 0.466, y: 0}
   m_SizeDelta: {x: 1.6332, y: 0.3602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712777300
@@ -38016,7 +38016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.466, y: 0.06}
+  m_AnchoredPosition: {x: 0.466, y: 0}
   m_SizeDelta: {x: 1.6332, y: 0.3602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1906934409

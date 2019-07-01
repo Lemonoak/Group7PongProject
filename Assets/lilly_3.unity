@@ -8255,7 +8255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20490003, y: 0.09890004}
+  m_AnchoredPosition: {x: -0.20490003, y: 0}
   m_SizeDelta: {x: 1.2273, y: 1.1674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664523997
@@ -16977,7 +16977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.466, y: 0.06}
+  m_AnchoredPosition: {x: 0.466, y: 0}
   m_SizeDelta: {x: 1.6332, y: 0.3602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998116641
@@ -28898,11 +28898,11 @@ MonoBehaviour:
   musk: {fileID: 1720513320}
   PlayerScoar: 1
   player1RoundWins:
-  - {fileID: 1120999412}
-  - {fileID: 664523997}
-  player2RoundWins:
-  - {fileID: 1199000639}
   - {fileID: 1459110413}
+  - {fileID: 1120999412}
+  player2RoundWins:
+  - {fileID: 664523997}
+  - {fileID: 1199000639}
 --- !u!4 &1210951426
 Transform:
   m_ObjectHideFlags: 0
@@ -31216,7 +31216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.466, y: 0.06}
+  m_AnchoredPosition: {x: 0.466, y: 0}
   m_SizeDelta: {x: 1.6332, y: 0.3602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423999525
@@ -31865,7 +31865,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.20490003, y: 0.09890004}
+  m_AnchoredPosition: {x: -0.20490003, y: 0}
   m_SizeDelta: {x: 1.2273, y: 1.1674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459110413

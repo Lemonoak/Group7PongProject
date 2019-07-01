@@ -10,11 +10,13 @@ public class Player_Movement : MonoBehaviour
     public string PlayerString;
     public float speed = 10f;
     public GameObject TextHandler;
-    SpriteRenderer sR;
-    public Sprite hitAni;
 
+    SpriteRenderer sR;
+
+    public Sprite hitAni;
     public Sprite missAni;
     public Sprite bosstAni;
+
     Sprite defSpr;
     float animationDelay = 0.2f;
     float lastTime;
@@ -75,7 +77,7 @@ public class Player_Movement : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
         }
-        Debug.Log(Input.GetAxis(movementkey));
+        //Debug.Log(Input.GetAxis(movementkey));
         if (Input.GetButtonDown(exitkey))
         {
             SceneManager.LoadScene(0);
