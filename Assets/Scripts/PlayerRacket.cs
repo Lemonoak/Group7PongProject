@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class PlayerRacket : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerRacket : MonoBehaviour
         if (transform.position.x < 0)
         {
             movementkey = "Push1";
+            //gamepad
         }
         else
         {
