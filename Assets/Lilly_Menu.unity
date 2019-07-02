@@ -29860,7 +29860,7 @@ MonoBehaviour:
   - {fileID: 806670839}
   pickupManager: {fileID: 1065789378}
   musk: {fileID: 862311037}
-  PlayerScoar: 1
+  PlayerScoar: 0
   player1RoundWins:
   - {fileID: 1140909883}
   - {fileID: 575155974}

@@ -15,8 +15,7 @@ public class ArmAnimationCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-       
+
     }
     private void Awake()
     {
@@ -27,8 +26,7 @@ public class ArmAnimationCode : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-        
+    {        
         if (aM.enabled)
         {
              if (Time.fixedTime > (time + (aM.GetCurrentAnimatorStateInfo(0).length * 0.5)) && going)

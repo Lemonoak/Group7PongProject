@@ -31,12 +31,10 @@ public class PlayerRacket : MonoBehaviour
 
     void Update()
     {
-
-        if(BallIsInside)
+        if (Input.GetButtonDown(movementkey))
         {
-            if(Input.GetButtonDown(movementkey))
+            if(BallIsInside)
             {
-
                 tickSource.Play();
                 Debug.Log("Tried to push");/*
                 if(PlayParticles)
@@ -45,12 +43,10 @@ public class PlayerRacket : MonoBehaviour
                 } */
                 myMama.swungRaket(true);
                 Ball.GetComponent<BallMovement>().AddSpeed();
+                
             }
-        }
-        else if(!BallIsInside)
-        {
-            if (Input.GetButtonDown(movementkey))
-            {
+            else if(!BallIsInside)
+            {            
                 myMama.swungRaket(false);
                 
                 if (PlayParticles)
@@ -60,20 +56,16 @@ public class PlayerRacket : MonoBehaviour
                         HitParticlesFailed.Play();
                     }
                 }
-               
             }
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Ball")
-        {
-            
+        {            
             BallIsInside = true;
             Ball = collision.gameObject;
-            Debug.Log("Found Ball");
         }
     }
 
@@ -82,7 +74,6 @@ public class PlayerRacket : MonoBehaviour
         if (collision.tag == "Ball")
         {
             BallIsInside = false;
-            Debug.Log("Lost Ball");
         }
     }
 }

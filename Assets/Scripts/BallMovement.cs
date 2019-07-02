@@ -151,15 +151,17 @@ public class BallMovement : MonoBehaviour
     //Sets the start direction and adds force to the ball in that direction
     void RandomizeStartDirection()
     {
-        int StartValue = Random.Range(0, 2);
+        int[] num = new int[] {-1,1};
+        int startDir = Random.Range(0, 2);
+        float startAngle = Random.Range(1.5f,3);
 
         if (transform.position.x > 0)
         {
-            RB.AddForce(new Vector2(StartSpeed, StartSpeed / 2));
+            RB.AddForce(new Vector2(StartSpeed, (StartSpeed / startAngle) * num[startDir]));
         }
         else
         {
-            RB.AddForce(new Vector2(-StartSpeed, -StartSpeed / 2));
+            RB.AddForce(new Vector2(-StartSpeed, (StartSpeed / startAngle) * num[startDir]));
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -174,7 +176,7 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.tag == "Player")
         {
-            Debug.Log("Entered Player");
+            //Debug.Log("Entered Player");
             //ERROR HANDLING
             if(PlayerSmashed)
             {
@@ -183,7 +185,7 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.tag == "AI")
         {
-            Debug.Log("Entered AI");
+            //Debug.Log("Entered AI");
             //ERROR HANDLING
             if (PlayerSmashed)
             {

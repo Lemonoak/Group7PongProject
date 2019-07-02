@@ -31,11 +31,11 @@ public class BallSpawner : MonoBehaviour
         Vector2 tempVector;
         if (scoreBoard.PlayerScoar == 1)
         {
-            tempVector = ballSpawnPoint1.transform.position;
+            tempVector = ballSpawnPoint2.transform.position;
         }
         else
         {
-            tempVector = ballSpawnPoint2.transform.position;
+            tempVector = ballSpawnPoint1.transform.position;
         }
         spawnedObject = (GameObject)Instantiate(spawnrefObject, tempVector, Quaternion.identity);
         spawnedObject.GetComponent<BallMovement>().board = scoreBoard;

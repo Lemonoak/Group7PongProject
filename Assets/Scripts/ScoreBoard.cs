@@ -116,6 +116,20 @@ public class ScoreBoard : MonoBehaviour
         musk.GetComponent<AudioSource>().volume = 0.3f;
         hasScored = true;
         PlayerScoar = playerGoal;
+        /*
+        if (PlayerScoar == 1)
+        {
+            roundWinP1++;
+            roundwins(player1RoundWins, roundWinP1);
+            scoreboardPlayer1.NewScoreAdd(score);
+        }
+        else
+        {
+            roundWinP2++;
+            roundwins(player2RoundWins, roundWinP2);
+            scoreboardPlayer2.NewScoreAdd(score);
+        }
+        */
         if (PlayerScoar == 1)
         {
             roundWinP1++;
@@ -135,6 +149,7 @@ public class ScoreBoard : MonoBehaviour
         {
             hasScored = false;
             musk.GetComponent<AudioSource>().volume = 0.75f;
+            /*
             if (PlayerScoar == 1)
             {            
                 MonkeyArmP1.MoveArmAnimation();
@@ -143,15 +158,22 @@ public class ScoreBoard : MonoBehaviour
             {
                 MonkeyArmP2.MoveArmAnimation();
             }
-            ResetTheBoard();
-            
+            */
+            if (PlayerScoar == 1)
+            {
+                MonkeyArmP2.MoveArmAnimation();
+            }
+            else
+            {
+                MonkeyArmP1.MoveArmAnimation();
+            }
+            ResetTheBoard();            
         }
     }
     void ResetTheBoard()
     {
         pickupManager.TurnOfAll();
         TurnOfAll();
-
     }
     void roundwins (List<Round> givepoint, int score)
     {

@@ -43,7 +43,7 @@ public class ScoreScript : MonoBehaviour
         {           
             if (lastTime > ScoreSpeed)
             {
-                lastTime = 0; ;
+                lastTime = 0;
                 playerScore += Mathf.FloorToInt(change);
                 DrawScore();
             }               
