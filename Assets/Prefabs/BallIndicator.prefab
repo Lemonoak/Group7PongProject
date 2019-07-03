@@ -173,5 +173,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 0}
-  baseScale: {x: 0, y: 0, z: 0}
   ballrE: {fileID: 2742085937943056139}
