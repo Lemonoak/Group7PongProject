@@ -27,9 +27,6 @@ public class BallMovement : MonoBehaviour
     float CurrentY = 0.0f;
 
     bool PlayerSmashed = false;
-
-    float OldVeloctyX;
-    float OldVeloctyY;
     Vector2 oldVelocty;
     float maxVelocityPart = 1;
     float funXSpeed = 8;
@@ -182,6 +179,10 @@ public class BallMovement : MonoBehaviour
             {
                 RemoveSpeed();
             }
+            else
+            {
+                oldVelocty = RB.velocity;
+            }
         }
         else if (collision.tag == "AI")
         {
@@ -190,6 +191,10 @@ public class BallMovement : MonoBehaviour
             if (PlayerSmashed)
             {
                 RemoveSpeed();
+            }
+            else
+            {
+                oldVelocty = RB.velocity;
             }
         }
         else if (collision.tag == "Goal")
@@ -218,15 +223,13 @@ public class BallMovement : MonoBehaviour
     public void AddSpeed()
     {
         PlayerSmashed = true;
-        OldVeloctyX = RB.velocity.x;
-        OldVeloctyY = RB.velocity.y;
+        oldVelocty = RB.velocity;
         RB.velocity += new Vector2(RB.velocity.x * HitPlayerSpeedUpValue, RB.velocity.y * HitPlayerSpeedUpValue);
     }
 
     public void RemoveSpeed()
     {
         PlayerSmashed = false;
-        RB.velocity = new Vector2(OldVeloctyX, OldVeloctyY);
-        oldVelocty = RB.velocity;
+        RB.velocity = new Vector2(oldVelocty.x, oldVelocty.y);
     }
 }

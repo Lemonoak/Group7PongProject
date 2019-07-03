@@ -103,7 +103,7 @@ MonoBehaviour:
   movementkey: Movement1
   exitkey: 
   PlayerString: 
-  speed: 10
+  speed: 15
   TextHandler: {fileID: 0}
   hitAni: {fileID: 21300000, guid: 7fe5cbfe9bdeb425e83f87ef1662c06a, type: 3}
   missAni: {fileID: 21300000, guid: fa5dfbbd74f9d4c8998fc6c36405def8, type: 3}
