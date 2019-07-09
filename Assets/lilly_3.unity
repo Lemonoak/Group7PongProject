@@ -6674,7 +6674,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: won
+  m_text: WON
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dd934db938630642b96b8b7d6975db0, type: 2}
   m_sharedMaterial: {fileID: 21250818127210180, guid: 6dd934db938630642b96b8b7d6975db0,
@@ -7012,7 +7012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553187668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.037086, y: 4.269383, z: 0}
+  m_LocalPosition: {x: 17.037086, y: 5.998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17135,7 +17135,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Lost
+  m_text: LOST
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dd934db938630642b96b8b7d6975db0, type: 2}
   m_sharedMaterial: {fileID: 21250818127210180, guid: 6dd934db938630642b96b8b7d6975db0,
@@ -18829,6 +18829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleTime: 60
+  traker: {fileID: 0}
 --- !u!1 &1141032945
 GameObject:
   m_ObjectHideFlags: 0
@@ -19736,8 +19737,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207963390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.012, y: 0, z: 0}
-  m_LocalScale: {x: 1.001, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1532720786}
   m_RootOrder: 0
@@ -31756,7 +31757,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Lost
+  m_text: LOST
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dd934db938630642b96b8b7d6975db0, type: 2}
   m_sharedMaterial: {fileID: 21250818127210180, guid: 6dd934db938630642b96b8b7d6975db0,
@@ -32997,7 +32998,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: won
+  m_text: WON
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dd934db938630642b96b8b7d6975db0, type: 2}
   m_sharedMaterial: {fileID: 21250818127210180, guid: 6dd934db938630642b96b8b7d6975db0,
@@ -33353,6 +33354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleTime: 120
+  traker: {fileID: 0}
 --- !u!4 &1533360083
 Transform:
   m_ObjectHideFlags: 0
@@ -40369,7 +40371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2105776191
 Transform:
   m_ObjectHideFlags: 0
@@ -45735,32 +45737,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: ballSpawnPoint1
-      value: 
-      objectReference: {fileID: 1702471718}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: ballSpawnPoint2
-      value: 
-      objectReference: {fileID: 921336124}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: spawnrefObject
-      value: 
-      objectReference: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
-        type: 3}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: scoreBoard
-      value: 
-      objectReference: {fileID: 1210951425}
-    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
-        type: 3}
-      propertyPath: musk
-      value: 
-      objectReference: {fileID: 1720513320}
     - target: {fileID: 65580625414687242, guid: 152035231bd5f92468e19de549081952,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45816,6 +45792,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: ballSpawnPoint1
+      value: 
+      objectReference: {fileID: 1702471718}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: ballSpawnPoint2
+      value: 
+      objectReference: {fileID: 921336124}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: spawnrefObject
+      value: 
+      objectReference: {fileID: 1682644557568951634, guid: 39fc15e47fb53a945b67afda115841b3,
+        type: 3}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: scoreBoard
+      value: 
+      objectReference: {fileID: 1210951425}
+    - target: {fileID: 5601760887244138056, guid: 152035231bd5f92468e19de549081952,
+        type: 3}
+      propertyPath: musk
+      value: 
+      objectReference: {fileID: 1720513320}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152035231bd5f92468e19de549081952, type: 3}
 --- !u!1001 &2618850752908938384

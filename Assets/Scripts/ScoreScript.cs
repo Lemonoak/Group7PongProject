@@ -61,7 +61,7 @@ public class ScoreScript : MonoBehaviour
     private void DrawScore()
     {
         frontBuffer = "";
-        for (int i = 1000000000; i > playerScore; i = i /10)
+        for (long i = 1000000000000; i > playerScore; i = i /10)
         {
             frontBuffer += "0";
         }
