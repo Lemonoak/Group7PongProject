@@ -45,16 +45,13 @@ public class BallMovement : MonoBehaviour
 
     void Update()
     {
-        //Limits the speed to velocty 45 so that collisions dont break (NEEDS MORE TESTING)
-        if (RB.velocity.x < 45 || RB.velocity.y < 45 || RB.velocity.x > -45 || RB.velocity.y > -45)
-        {
-            RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
-        }
+        /*
         //Makes the ball add velocity upwards if it happens to only go on the x axis
         if (RB.velocity.y == 0)
         {
             RB.velocity += new Vector2(0.0f, RB.velocity.y + 0.2f);
         }
+        
 
         CurrentX = Mathf.Round(RB.velocity.x);
         CurrentY = Mathf.Round(RB.velocity.y);
@@ -85,6 +82,9 @@ public class BallMovement : MonoBehaviour
             //Debug.Log("  Y   " + CurrentY);
             //Debug.Log("  X   " + CurrentX);
         }
+        */
+
+        RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
 
         if(Ball.transform.position.x < - 5000)
         {
@@ -105,7 +105,7 @@ public class BallMovement : MonoBehaviour
 
     Vector2 Maxvelocity()
     {
-        Vector2 velocityClamp = new Vector2( Mathf.Abs(RB.velocity.x), Mathf.Abs(RB.velocity.y));
+        Vector2 velocityClamp = new Vector2( Mathf.Clamp(Mathf.Abs(RB.velocity.x), 0,45), Mathf.Clamp(Mathf.Abs(RB.velocity.y), 0, 45) );
         float remainder;
         if (velocityClamp.x < funXSpeed)
         {       
@@ -132,8 +132,8 @@ public class BallMovement : MonoBehaviour
         if (velocityClamp.x + velocityClamp.y < Mathf.Abs(oldVelocty.x) + Mathf.Abs(oldVelocty.y))
         {
             Debug.Log("GotSlower");
-            velocityClamp.x = Mathf.Abs(oldVelocty.x);
-            velocityClamp.y = Mathf.Abs(oldVelocty.y);
+            velocityClamp.x = Mathf.Clamp(Mathf.Abs(oldVelocty.x), 0, 45);
+            velocityClamp.y = Mathf.Clamp(Mathf.Abs(oldVelocty.y), 0, 45);
         }
         if (RB.velocity.x < 0)
         {

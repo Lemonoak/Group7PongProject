@@ -71,7 +71,7 @@ public class Player_Movement : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, speed);
         }
-        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -2.2f)
+        else if (Input.GetAxis(movementkey) == -1 && this.transform.position.y > -2f)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -speed);
         }

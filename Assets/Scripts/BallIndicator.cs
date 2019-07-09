@@ -20,12 +20,12 @@ public class BallIndicator : MonoBehaviour
             ballrE.gameObject.transform.localScale = baseScale * Mathf.Clamp( 1f - Mathf.Abs(Ball.transform.position.x / 20), 0.5f, 1);
             if (Ball.transform.position.x > 0)
             {
-                gameObject.transform.position = new Vector2( -1.15f, Ball.transform.position.y);
+                gameObject.transform.position = new Vector2( -1.24f, Ball.transform.position.y);
                 gameObject.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, -90f));
             }
             else if(Ball.transform.position.x < 0)
             {
-                gameObject.transform.position = new Vector2(1.15f, Ball.transform.position.y);
+                gameObject.transform.position = new Vector2(1.24f, Ball.transform.position.y);
                 gameObject.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, 90f));
             }
             rE.color = Color.white;

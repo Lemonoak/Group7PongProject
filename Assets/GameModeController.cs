@@ -19,10 +19,22 @@ public class GameModeController : MonoBehaviour
     {
         if (!GameObject.FindWithTag("Player"))
         {
-            if (Input.GetButtonDown("Return1") || Input.GetButtonDown("Return2"))
+            if (Input.GetButtonDown("FlipScreen"))
             {
                 screenLayingDown = !screenLayingDown;
                 RotateAll();
+            }
+        }
+
+        if (Input.GetButtonDown("QuitGame"))
+        {
+            if (!GameObject.FindWithTag("Player"))
+            {
+                Application.Quit();
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
             }
         }
     }
