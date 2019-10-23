@@ -31,16 +31,15 @@ public class PlayerRacket : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown(movementkey))
+        if (Input.GetButtonDown(movementkey) && myMama.hasMiss())
         {
             if(BallIsInside)
             {
                 tickSource.Play();
-                Debug.Log("Tried to push");/*
                 if(PlayParticles)
                 {
                     HitParticles.Play();
-                } */
+                }
                 myMama.swungRaket(true);
                 Ball.GetComponent<BallMovement>().AddSpeed();
                 

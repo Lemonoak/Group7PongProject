@@ -5195,7 +5195,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9722,7 +9722,7 @@ MonoBehaviour:
   tickSource: {fileID: 0}
   HitParticles: {fileID: 3071209433885157288}
   HitParticlesFailed: {fileID: 1762801559136208087}
-  PlayParticles: 1
+  PlayParticles: 0
   myMama: {fileID: 3503846511555440644}
 --- !u!58 &8737648278970628367
 CircleCollider2D:

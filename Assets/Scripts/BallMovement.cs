@@ -34,13 +34,12 @@ public class BallMovement : MonoBehaviour
 
     void Start()
     {
-
         tickSource = GetComponent<AudioSource>();
-
-        RB = GetComponent<Rigidbody2D>();
+        RB = GetComponent<Rigidbody2D>();       
         Ball = gameObject;
         //Randomzies direction to start and adds force on the ball
         RandomizeStartDirection();
+        oldVelocty = RB.velocity;
     }
 
     void Update()
@@ -171,7 +170,7 @@ public class BallMovement : MonoBehaviour
         {            
             RB.velocity += new Vector2(RB.velocity.x * SpeedUpValue, RB.velocity.y * SpeedUpValue);
         }
-        else if (collision.tag == "Player")
+        else if (collision.tag == "Player" || collision.tag == "AI")
         {
             //Debug.Log("Entered Player");
             //ERROR HANDLING
@@ -179,22 +178,24 @@ public class BallMovement : MonoBehaviour
             {
                 RemoveSpeed();
             }
-            else
+            else if(Mathf.Abs(oldVelocty.x) + Mathf.Abs(oldVelocty.x) < Mathf.Abs(RB.velocity.x) + Mathf.Abs(RB.velocity.x))
             {
                 oldVelocty = RB.velocity;
             }
-        }
-        else if (collision.tag == "AI")
-        {
-            //Debug.Log("Entered AI");
-            //ERROR HANDLING
-            if (PlayerSmashed)
-            {
-                RemoveSpeed();
-            }
             else
             {
-                oldVelocty = RB.velocity;
+                oldVelocty.x = Mathf.Abs(oldVelocty.x);
+                oldVelocty.y = Mathf.Abs(oldVelocty.y);
+                if (RB.velocity.x < 0)
+                {
+                    oldVelocty.x *= -1;
+                }
+                if (RB.velocity.y < 0)
+                {
+                    oldVelocty.y *= -1;
+                }
+                RB.velocity = oldVelocty;
+                Debug.Log("I Has ComeTo THs");
             }
         }
         else if (collision.tag == "Goal")
@@ -202,7 +203,6 @@ public class BallMovement : MonoBehaviour
             //ERROR HANDLING
             if (collision.GetComponent<Goal>() != null)
             {
-
                 if (transform.position.x < 0)
                 {
                     board.Scored(2, Mathf.Abs(RB.velocity.x) + Mathf.Abs(RB.velocity.y));
@@ -225,6 +225,7 @@ public class BallMovement : MonoBehaviour
         PlayerSmashed = true;
         oldVelocty = RB.velocity;
         RB.velocity += new Vector2(RB.velocity.x * HitPlayerSpeedUpValue, RB.velocity.y * HitPlayerSpeedUpValue);
+        Debug.Log("got smashed");
     }
 
     public void RemoveSpeed()

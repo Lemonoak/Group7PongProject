@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
+    private void Start()
+    {
+        Debug.Log(gameObject);
+    }
+    /*
     public void SceneSwitcher ()
     {
         SceneManager.LoadScene(1);
     }
     void Update()
     {
+        Debug.Log(gameObject);
         StartGame1Player();
         StartGame2Player();
     }
@@ -31,5 +36,5 @@ public class SceneSwitch : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
-
+*/
 }

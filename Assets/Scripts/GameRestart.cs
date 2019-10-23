@@ -24,7 +24,7 @@ public class GameRestart : MonoBehaviour
             traker = Instantiate(traker);
             DontDestroyOnLoad(traker);
         }
-        traker.GetComponent<GameModeController>().RotateAll();
+        //traker.GetComponent<GameModeController>().RotateAll();
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class GameRestart : MonoBehaviour
             }
             else if(Time.fixedTime > idleTime + restartTime)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
             }
         }
     }

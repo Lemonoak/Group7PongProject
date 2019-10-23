@@ -59,7 +59,7 @@ public class OnBoardPickUp : MonoBehaviour
     }
     public void TurnOnText(float diraction)
     {
-        if (GameObject.FindWithTag("GameMode").GetComponent<GameModeController>().screenLayingDown)
+        if (GameObject.FindWithTag("GameMode").GetComponent<PlayerManager>().screenlayingDown)
         {
             if(diraction < 0)
             {

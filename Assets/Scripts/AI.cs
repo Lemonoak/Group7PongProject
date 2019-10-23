@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class AI : MonoBehaviour
 {
@@ -10,9 +9,8 @@ public class AI : MonoBehaviour
     public float AISpeed = 10.0f;
     public string movementkey;
     public string specialKey;
-    Scene m_Scene;
     bool hasNewPlayer;
-    string curentScence = "";
+    //string curentScence = "";
     SpriteRenderer sR;
     public Sprite hitAni;
     Sprite defSpr;
@@ -24,7 +22,7 @@ public class AI : MonoBehaviour
     float lastTime;
 
     private void Start()
-    {
+    {/*
         if (transform.position.x < 0)
         {
             specialKey = "Start1";
@@ -34,15 +32,15 @@ public class AI : MonoBehaviour
         {
             specialKey = "Start2";
             movementkey = "Movement2";
-        }
+        }*/
         sR = GetComponent<SpriteRenderer>();
         defSpr = sR.sprite;
     }
     void Update()
     {
         HandleMovement();
-        SpawnPlayer();
-        MenuSelfReset();
+        //SpawnPlayer();
+        //MenuSelfReset();
         if (Time.fixedTime > lastTime + animationDelay && sR.sprite != defSpr)
         {
             sR.sprite = defSpr;
@@ -50,17 +48,18 @@ public class AI : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.tag == "Ball" && sR.sprite != bosstAni && sR.sprite != missAni)
         {
             sR.sprite = hitAni;
             lastTime = Time.fixedTime;
         }
     }
+    /*
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
-
+    */
     void HandleMovement()
     {
         //For the ai on the right monitor
@@ -104,6 +103,7 @@ public class AI : MonoBehaviour
     }
 
     //Spawns the player if it presses a movementkey
+    /*
     void SpawnPlayer()
     {
         //ERROR HANDLING AND MENU
@@ -117,7 +117,7 @@ public class AI : MonoBehaviour
             }
         }
     }
-
+    
     void MenuSelfReset()
     {
         if (SceneManager.GetActiveScene().name != curentScence && curentScence == "lilly_3")
@@ -128,7 +128,7 @@ public class AI : MonoBehaviour
         {
             curentScence = SceneManager.GetActiveScene().name;
         }
-    }
+    }*/
 
     //Gets the ball object reference
     public void GetBall()

@@ -13,6 +13,7 @@ TagManager:
   - GameMode
   - UI
   - ControllText
+  - UpUI
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - UpUI
   - 
   - 
   - 

@@ -27,7 +27,7 @@ public class Player_Movement : MonoBehaviour
     {
         if (transform.position.x < 0)
         {
-            if (GameObject.FindWithTag("GameMode").GetComponent<GameModeController>().screenLayingDown)
+            if (GameObject.FindWithTag("GameMode").GetComponent<PlayerManager>().screenlayingDown)
             {
                 movementkey = "Movement1";
             }
@@ -35,12 +35,11 @@ public class Player_Movement : MonoBehaviour
             {
                 movementkey = "GMovement1";
             }
-            exitkey = "Return1";
             PlayerString = "Player1";
         }
         else
         {
-            if (GameObject.FindWithTag("GameMode").GetComponent<GameModeController>().screenLayingDown)
+            if (GameObject.FindWithTag("GameMode").GetComponent<PlayerManager>().screenlayingDown)
             {
                 movementkey = "Movement2";
             }
@@ -48,7 +47,6 @@ public class Player_Movement : MonoBehaviour
             {
                 movementkey = "GMovement2";
             }
-            exitkey = "Return2";
             PlayerString = "Player2";
         }
 
@@ -58,7 +56,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -79,15 +77,11 @@ public class Player_Movement : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
         }
-        //Debug.Log(Input.GetAxis(movementkey));
-        if (Input.GetButtonDown(exitkey))
-        {
-            SceneManager.LoadScene(0);
-        }
+        /*Debug.Log(Input.GetAxis(movementkey));
         if (SceneManager.GetActiveScene().name != "lilly_3")
         {
             Destroy(gameObject);
-        }
+        }*/
         if(Time.fixedTime > lastTime + animationDelay && sR.sprite != defSpr)
         {
             sR.sprite = defSpr;
@@ -134,6 +128,10 @@ public class Player_Movement : MonoBehaviour
             }
             lastTime = Time.fixedTime;
         }
+    }
+    public bool hasMiss()
+    {
+        return sR.sprite != missAni;
     }
 
 }
